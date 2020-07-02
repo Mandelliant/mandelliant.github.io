@@ -1,3 +1,7 @@
+---
 layout: page
-title: "Recommended reading"
+title: Recommended reading
 permalink: /book-list/
+---
+
+### Content coming soon

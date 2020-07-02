@@ -114,11 +114,8 @@ table td { border: 1px solid #e8e8e8; }
   background-color: #ffffff;}
 
   #section-box {
-    border: 1px solid;
     padding: 10px;
     margin-right: 50;
-    box-shadow: 5px 10px #778899;
-    background-color: #ffffff;
   }
 
 .page-heading { font-size: 32px; }

@@ -3,7 +3,7 @@ layout: post
 title:  "Building a personal website using Jekyll and GitHub Pages"
 title-short: Building a Jekyll blog
 tags: [websites, jekyll, github pages, personal website, ruby]
-date:   2020-07-24 0000
+date:   2020-07-27 0000
 categories: how-to
 ---
 
@@ -39,24 +39,24 @@ $ bundle install jekyll
 
 Follow [the setup guide](guide) on the Pages website:
 
-1. Create your repository.
-For individual and organization pages, the repository must be named <username>.github.io. These websites will publish from the `master` branch of the repository. Project pages can publish from a `gh-pages` branch or a `docs` folder, but I'm only covering individual/organization pages in this guide.
+#### Create your repository.
 
-**Note: when initially setting up the repository for Pages on GitHub, the instructions walk you through configuration but don't explicitly say whether or not to create the repo. When you get to that point, initialize with a README (unless you're importing a repository) and click 'Create'.**
+For individual and organization pages, the repository must be named `username.github.io` where `username` is your GitHub username. These websites will publish from the `master` branch of the repository. Project pages can publish from a `gh-pages` branch or a `docs` folder, but I'm only covering individual/organization pages in this guide.
 
+When initially setting up the repository for Pages on GitHub, the instructions walk you through configuration but don't explicitly say whether or not to create the repo. When you get to that point, initialize with a README (unless you're importing a repository) and click 'Create'.
 
-![create-repo](/assets/img/blog/2020/building-personal-website-jekyll/create-repo.png)
+  ![create-repo](/assets/img/blog/2020/building-personal-website-jekyll/create-repo.png)
 
+#### Create your Jekyll site
 
-2. Using your Git tool of choice, navigate to the root folder containing your soon to be website. Initialize it as a Git repository with the following command, replacing REPOSITORY-NAME with your repository name:
+1. Using your Git tool of choice, navigate to the root folder containing your soon to be website. Initialize it as a Git repository with the following command, replacing REPOSITORY-NAME with your repository name:
 
     ```
     $ git init REPOSITORY-NAME
     > Initialized empty Git repository in /Users/anthony/mandelliant.github.io/.git/
     ```
 
-
-3. Because this is a personal/organizational Pages site, the `master` branch is your live website. Check you're on the right branch with `git branch`.
+2. Because this is a personal/organizational Pages site, the `master` branch is your live website. Check you're on the right branch with `git branch`.
 
     ```
     $ git branch
@@ -65,9 +65,9 @@ For individual and organization pages, the repository must be named <username>.g
 
     Once you're in the right folder and on the right branch, use the following Jekyll command to create the website: `$ bundle exec jekyll VERSION new .`. Replace VERSION with the [current dependency version GitHub Pages requires](dependency).
 
-4. Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the `gem` line to: `gem "github-pages", "~> VERSION", group: :jekyll_plugins`, again replacing VERSION with the [current dependency version](dependency). I couldn't get that to work, so I left off the VERSION entirely and that seemed to do the trick. I'm not necessarily endorsing that as the correct course of action, but I haven't run into any issues.
+3. Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the `gem` line to: `gem "github-pages", "~> VERSION", group: :jekyll_plugins`, again replacing VERSION with the [current dependency version](dependency). I couldn't get that to work, so I left off the VERSION entirely and that seemed to do the trick. I'm not necessarily endorsing that as the correct course of action, but I haven't run into any issues.
 
-    This is what the relevant lines of my Gemfile looks like after updating:
+    This is what the relevant lines of my Gemfile look like after updating:
 
 
     ```ruby
@@ -82,7 +82,7 @@ For individual and organization pages, the repository must be named <username>.g
 
     Save and close the Gemfile.
 
-5. At this point, GitHub suggests [testing your site locally](testing):
+4. At this point, GitHub suggests [testing your site locally](testing). Use the command `$ bundle exec jekyll serve` to run a test server from your computer:
 
     ```
     $ bundle exec jekyll serve
@@ -100,7 +100,7 @@ For individual and organization pages, the repository must be named <username>.g
 
     In a new browser tab, navigate to `localhost:4000` to see your website for the first time.
 
-6. Connect your local directory with your repository on GitHub.
+5. Connect your local directory with your repository on GitHub.
 
     First, run `$ git remote add origin https://github.com/USER/REPOSITORY.git`, replacing USER with the user account that owns the repository, and REPOSITORY with the name of your GitHub Pages repo.
 
@@ -114,32 +114,33 @@ And that's it! Your website should now be live at YOURNAME.github.io. You can ch
 From there, the GitHub guide offers instructions on [adding new posts and pages](new-content) or [customizing your theme](custom-theme).
 
 
-<h2 id="modify">Modify the design</h2>
+<h2 id="modify">3. Modify the design</h2>
 
 If you're like me and unfamiliar with Ruby, different elements called gems control a lot of the configurations and settings; Jekyll layout themes, like the default theme Minima, are gems.
 
-This means much of the HTML laying out your pages is hidden away in the directory where you initially installed Ruby. The path should be something like `Ruby26x-64 > lib > ruby > gems > 2.6.0 > gems > minima-2.5.1`, and from there you can access the `_layouts` and `_includes`.
+This means much of the HTML laying out your pages is hidden away in the directory where you initially installed Ruby. Unless you selected a different location, the path should be something like `C:/Ruby26x-64 > lib > ruby > gems > 2.6.0 > gems > minima-2.5.1` for Windows (which should translate to `/Users/username/.rubies/ruby-2.6.2/bin/ruby` on Mac). From there you can access the `_layouts` and `_includes` folders and files.
 
-If you only change the local version of the file, the changes won't be pushed to GitHub, so the live version of your website will look different than when you [test it locally](testing). To override any of these files, all you have to do is create a new version in a `_layouts` or `_includes` folder in your website's primary directory (similar to the instructions in the guide on [customizing your theme](custom-theme) - you can also look at my website's [repository](repo) as an example).
+You can modify these files to change the layout of your pages from your theme's default or add elements like the callout box above the main content on my homepage that shows my most recent blog post. But if you only change the local version of the file on your computer, the changes won't override the default settings GitHub uses to render your site, so the live version of your website will look different than when you [test it locally](testing).
 
-I added a callout box above the main content on my homepage so I could feature my most recent blog post above the list of my writing samples.
+To override any of these files, all you have to do is create a new version in a `_layouts` or `_includes` folder in your website's root directory (similar to the instructions in the guide on [customizing your theme](custom-theme)- you can also look at my website's [repository](repo) as an example).
 
-The homepage layout is controlled by the `index.markdown` file Jekyll placed in the root directory. If you open that file, you'll notice the layout is `home`.
+#### Modifying the homepage
+
+The homepage layout is controlled by the `index.markdown` file Jekyll placed in your root directory. If you open that file, you'll notice the layout is `home`.
 
 ![homepage](/assets/img/blog/2020/building-personal-website-jekyll/homepage-markdown.png)
 
-
-So I added a `_layouts` folder to my root directory, then create a `home.html` file inside.
+Add a `_layouts` folder to your root directory, then create a `home.html` file inside.
 
 ![layouts](/assets/img/blog/2020/building-personal-website-jekyll/layouts.png)
 
-In the `home.html` file, I added the floating box:
+Copy the contents of the `home.html` file in your local Ruby folder into the new file in your website (or start completely from scratch if you prefer). Now in the file in your website, you can make any changes you want. Add the floating box:
 
 ![floating-box](/assets/img/blog/2020/building-personal-website-jekyll/floating-box.png)
 
-*The endif tags in this code snippet were causing a Jekyll Liquid syntax error. You can find the code [here](floating-box-code).*
+*The endif tags in this code snippet were causing a Jekyll Liquid syntax error preventing the post from building locally, so you get a screenshot instead. You can find the code [here](floating-box-code).*
 
-It required some CSS, so I created an `Assets` folder in the root directory and a `main.scss` file to supercede the default CSS that comes with the Minima theme.
+Orienting the box on the page and styling the shadow requires some CSS. Create an `Assets` folder in the root directory and add a `main.scss` file inside to supersede the default CSS that comes with the Minima theme.
 
 ```css
 @import "minima";
@@ -152,16 +153,20 @@ It required some CSS, so I created an `Assets` folder in the root directory and 
 }
 ```
 
-<h2 id="domain">Set up a custom domain</h2>
+<h2 id="domain">4. Set up a custom domain</h2>
 
 GitHub makes it really easy to add your own domain for your Pages site. From your repository on GitHub, go to the settings and scroll down to the GitHub Pages section. There will be a field to input a custom domain:
 
 ![domain](/assets/img/blog/2020/building-personal-website-jekyll/custom-domain.png)
 
-This is my actual domain - thanks to a sweet project called [Handshake](hns), I own the top level domain `mandelliant/`. If you're [resolving HNS domains](hns-sites), check out [writtenby.mandelliant/](my-site). I plan to write more about Handshake and setting up the domain soon.
+This is my actual domain - thanks to a sweet project called [Handshake](hns), I own the top level domain `mandelliant/`. If you're [resolving HNS domains](hns-sites), check out <a href="writtenby.mandelliant/">writtenby.mandelliant/</a>. I plan to write more about Handshake and setting up the domain soon.
 
-There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now.
+There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has [instructions](github-domain-guide) for setting it up and updating your DNS records.
 
+<br>
+
+---
+<p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 ---
 
 
@@ -182,3 +187,4 @@ There are `baseurl` and `url` fields in the `_config.yml` file in your site's ro
 [hns-sites]: https://learn.namebase.io/starting-from-zero/how-to-access-handshake-sites
 [my-site]: writtenby.mandelliant/
 [floating-box-code]: https://github.com/Mandelliant/mandelliant.github.io/blob/master/assets/main.scss
+[github-domain-guide]: https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site

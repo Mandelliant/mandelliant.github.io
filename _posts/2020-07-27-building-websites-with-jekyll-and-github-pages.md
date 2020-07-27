@@ -159,7 +159,7 @@ GitHub makes it really easy to add your own domain for your Pages site. From you
 
 ![domain](/assets/img/blog/2020/building-personal-website-jekyll/custom-domain.png)
 
-This is my actual domain - thanks to a sweet project called [Handshake][hns], I own the top level domain `mandelliant/`. If you're [resolving HNS domains][hns-sites], check out <a href="http://writtenby.mandelliant/>writtenby.mandelliant/</a>. I plan to write more about Handshake and setting up the domain soon.
+This is my actual domain - thanks to a sweet project called [Handshake][hns], I own the top level domain `mandelliant/`. If you're [resolving HNS domains][hns-sites], check out <a href="http://writtenby.mandelliant/">writtenby.mandelliant/</a>. I plan to write more about Handshake and setting up the domain soon.
 
 There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has [instructions][github-domain-guide] for setting it up and updating your DNS records.
 

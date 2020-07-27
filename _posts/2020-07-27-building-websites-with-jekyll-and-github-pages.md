@@ -22,12 +22,12 @@ Here's what worked for me:
 
 <h2 id="prereqs">1. Prerequisites</h2>
 
-* [Git](git)
-* [Ruby](ruby)
-* [Bundler](bundler)
-* [Jekyll](jekyll)
+* [Git][git]
+* [Ruby][ruby]
+* [Bundler][bundler]
+* [Jekyll][jekyll]
 
-After installing Git and Ruby, download [Bundler](bundler). Bundler is a utility that manages some backend tasks (like keeping the Ruby gemfiles up to date and making sure Jekyll builds execute properly) to reduce build errors or environment issues.
+After installing Git and Ruby, download [Bundler][bundler]. Bundler is a utility that manages some backend tasks (like keeping the Ruby gemfiles up to date and making sure Jekyll builds execute properly) to reduce build errors or environment issues.
 
 GitHub recommends using Bundler to install Jekyll. From the root folder of your site project, run the following command:
 
@@ -37,7 +37,7 @@ $ bundle install jekyll
 
 <h2 id="getting-started">2. Follow GitHub's getting started</h2>
 
-Follow [the setup guide](guide) on the Pages website:
+Follow [the setup guide][guide] on the Pages website:
 
 #### Create your repository.
 
@@ -63,9 +63,9 @@ When initially setting up the repository for Pages on GitHub, the instructions w
     > * master
     ```
 
-    Once you're in the right folder and on the right branch, use the following Jekyll command to create the website: `$ bundle exec jekyll VERSION new .`. Replace VERSION with the [current dependency version GitHub Pages requires](dependency).
+    Once you're in the right folder and on the right branch, use the following Jekyll command to create the website: `$ bundle exec jekyll VERSION new .`. Replace VERSION with the [current dependency version GitHub Pages requires][dependency].
 
-3. Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the `gem` line to: `gem "github-pages", "~> VERSION", group: :jekyll_plugins`, again replacing VERSION with the [current dependency version](dependency). I couldn't get that to work, so I left off the VERSION entirely and that seemed to do the trick. I'm not necessarily endorsing that as the correct course of action, but I haven't run into any issues.
+3. Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the `gem` line to: `gem "github-pages", "~> VERSION", group: :jekyll_plugins`, again replacing VERSION with the [current dependency version][dependency]. I couldn't get that to work, so I left off the VERSION entirely and that seemed to do the trick. I'm not necessarily endorsing that as the correct course of action, but I haven't run into any issues.
 
     This is what the relevant lines of my Gemfile look like after updating:
 
@@ -82,7 +82,7 @@ When initially setting up the repository for Pages on GitHub, the instructions w
 
     Save and close the Gemfile.
 
-4. At this point, GitHub suggests [testing your site locally](testing). Use the command `$ bundle exec jekyll serve` to run a test server from your computer:
+4. At this point, GitHub suggests [testing your site locally][testing]. Use the command `$ bundle exec jekyll serve` to run a test server from your computer:
 
     ```
     $ bundle exec jekyll serve
@@ -109,9 +109,9 @@ When initially setting up the repository for Pages on GitHub, the instructions w
 And that's it! Your website should now be live at YOURNAME.github.io. You can check by navigating to your repo and opening the settings - if you scroll down, there will be a GitHub Pages section with a link to your site.
 
 ![pages-url](/assets/img/blog/2020/building-personal-website-jekyll/click-pages-url-to-preview.png)
-*[image source](source)*
+*[image source][source]*
 
-From there, the GitHub guide offers instructions on [adding new posts and pages](new-content) or [customizing your theme](custom-theme).
+From there, the GitHub guide offers instructions on [adding new posts and pages][new-content] or [customizing your theme][custom-theme].
 
 
 <h2 id="modify">3. Modify the design</h2>
@@ -120,9 +120,9 @@ If you're like me and unfamiliar with Ruby, different elements called gems contr
 
 This means much of the HTML laying out your pages is hidden away in the directory where you initially installed Ruby. Unless you selected a different location, the path should be something like `C:/Ruby26x-64 > lib > ruby > gems > 2.6.0 > gems > minima-2.5.1` for Windows (which should translate to `/Users/username/.rubies/ruby-2.6.2/bin/ruby` on Mac). From there you can access the `_layouts` and `_includes` folders and files.
 
-You can modify these files to change the layout of your pages from your theme's default or add elements like the callout box above the main content on my homepage that shows my most recent blog post. But if you only change the local version of the file on your computer, the changes won't override the default settings GitHub uses to render your site, so the live version of your website will look different than when you [test it locally](testing).
+You can modify these files to change the layout of your pages from your theme's default or add elements like the callout box above the main content on my homepage that shows my most recent blog post. But if you only change the local version of the file on your computer, the changes won't override the default settings GitHub uses to render your site, so the live version of your website will look different than when you [test it locally][testing].
 
-To override any of these files, all you have to do is create a new version in a `_layouts` or `_includes` folder in your website's root directory (similar to the instructions in the guide on [customizing your theme](custom-theme)- you can also look at my website's [repository](repo) as an example).
+To override any of these files, all you have to do is create a new version in a `_layouts` or `_includes` folder in your website's root directory (similar to the instructions in the guide on [customizing your theme][custom-theme]- you can also look at my website's [repository][repo] as an example).
 
 #### Modifying the homepage
 
@@ -138,7 +138,7 @@ Copy the contents of the `home.html` file in your local Ruby folder into the new
 
 ![floating-box](/assets/img/blog/2020/building-personal-website-jekyll/floating-box.png)
 
-*The endif tags in this code snippet were causing a Jekyll Liquid syntax error preventing the post from building locally, so you get a screenshot instead. You can find the code [here](floating-box-code).*
+*The endif tags in this code snippet were causing a Jekyll Liquid syntax error preventing the post from building locally, so you get a screenshot instead. You can find the code [here][floating-box-code].*
 
 Orienting the box on the page and styling the shadow requires some CSS. Create an `Assets` folder in the root directory and add a `main.scss` file inside to supersede the default CSS that comes with the Minima theme.
 
@@ -159,9 +159,9 @@ GitHub makes it really easy to add your own domain for your Pages site. From you
 
 ![domain](/assets/img/blog/2020/building-personal-website-jekyll/custom-domain.png)
 
-This is my actual domain - thanks to a sweet project called [Handshake](hns), I own the top level domain `mandelliant/`. If you're [resolving HNS domains](hns-sites), check out <a href="writtenby.mandelliant/">writtenby.mandelliant/</a>. I plan to write more about Handshake and setting up the domain soon.
+This is my actual domain - thanks to a sweet project called [Handshake][hns], I own the top level domain `mandelliant/`. If you're [resolving HNS domains][hns-sites], check out <a href="writtenby.mandelliant/">writtenby.mandelliant/</a>. I plan to write more about Handshake and setting up the domain soon.
 
-There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has [instructions](github-domain-guide) for setting it up and updating your DNS records.
+There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has [instructions][github-domain-guide] for setting it up and updating your DNS records.
 
 <br>
 

@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-09T20:16:29-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Hello world</title><link href="http://localhost:4000/updates/2020/07/06/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2020-07-06T00:00:00-04:00</published><updated>2020-07-06T00:00:00-04:00</updated><id>http://localhost:4000/updates/2020/07/06/hello-world</id><content type="html" xml:base="http://localhost:4000/updates/2020/07/06/hello-world.html">&lt;h3 id=&quot;and-so-it-begins&quot;&gt;And so it begins&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T00:06:23-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Building a personal website using Jekyll and GitHub Pages</title><link href="http://localhost:4000/how-to/2020/07/24/building-websites-with-jekyll-and-github-pages.html" rel="alternate" type="text/html" title="Building a personal website using Jekyll and GitHub Pages" /><published>2020-07-24T00:00:00-04:00</published><updated>2020-07-24T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/07/24/building-websites-with-jekyll-and-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/07/24/building-websites-with-jekyll-and-github-pages.html">&lt;h1 id=&quot;building-a-personal-website-using-jekyll-and-github-pages&quot;&gt;Building a personal website using Jekyll and GitHub Pages&lt;/h1&gt;
+
+&lt;p&gt;GitHub has a feature called &lt;a href=&quot;pages&quot;&gt;Pages&lt;/a&gt; which essentially lets you turn a repository full of &lt;a href=&quot;markdown&quot;&gt;markdown&lt;/a&gt; files into a website (like &lt;a href=&quot;repo&quot;&gt;the one you’re on now&lt;/a&gt;). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.&lt;/p&gt;
+
+&lt;p&gt;A personal website can be like a digital business card. I use mine as a blog and portfolio of both writing samples and the work I’ve done on the site. It’s a powerful professional tool and an outlet for creativity.&lt;/p&gt;
+
+&lt;p&gt;If you have some coding experience and don’t mind using command line tools, GitHub Pages and Jekyll might be worth considering if you want to build your own website..&lt;/p&gt;
+
+&lt;p&gt;Here’s what worked for me:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#prereqs&quot;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-started&quot;&gt;Follow GitHub’s getting started&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Modify the design&lt;/li&gt;
+  &lt;li&gt;Set up a custom domain&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;prereqs&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;git&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;bundler&quot;&gt;Bundler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After Git and Ruby, install &lt;a href=&quot;bundler&quot;&gt;Bundler&lt;/a&gt;. Bundler is a utility that manages some backend tasks (like keeping the Ruby gemfiles up to date and making sure Jekyll builds execute properly) to reduce build errors or environment issues. GitHub recommends using Bundler to install Jekyll:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Software installed, we’re one step closer to a website.&lt;/p&gt;
+
+&lt;p&gt;IMAGE&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Follow GitHub's getting started&lt;/h2&gt;
+
+&lt;p&gt;Follow &lt;a href=&quot;guide&quot;&gt;the setup guide&lt;/a&gt; on the Pages website:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create your repository. For individual and organization pages, the repository must be named username.github.io, where username = your username. These websites will publish from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of the repository. Project pages can publish from a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch or a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; folder, but I’m only covering individual/organization pages in this guide.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Using your Git tool of choice, navigate to the root folder containing your soon to be website. Initialize it as a Git repository with the following, replacing REPOSITORY-NAME with your repository name:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git init REPOSITORY-NAME
+&amp;gt; Initialized empty Git repository in /Users/octocat/my-site/.git/
+# Creates a new folder on your computer, initialized as a Git repository
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;3.&lt;/p&gt;</content><author><name>Anthony Mandelli</name></author><category term="websites" /><category term="jekyll" /><category term="github pages" /><category term="personal website" /><category term="ruby" /><summary type="html">Building a personal website using Jekyll and GitHub Pages</summary></entry><entry><title type="html">Hello world</title><link href="http://localhost:4000/updates/2020/07/06/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2020-07-06T00:00:00-04:00</published><updated>2020-07-06T00:00:00-04:00</updated><id>http://localhost:4000/updates/2020/07/06/hello-world</id><content type="html" xml:base="http://localhost:4000/updates/2020/07/06/hello-world.html">&lt;h3 id=&quot;and-so-it-begins&quot;&gt;And so it begins&lt;/h3&gt;
 
 &lt;p&gt;This website started off as a way to host some of my favorite written pieces that I’ve worked on over the years.&lt;/p&gt;
 

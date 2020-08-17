@@ -11,4 +11,4 @@ permalink: /bay-window/
 <br>
 Select a `contract_address` and visit **erasurebay.org/request/`contract_address`** to fulfill an open request.
 
-*Refreshes at midnight EST*
+*Data provided by [Dune Analytics](duneanalytics.com). Refreshes at midnight EST*

@@ -1,168 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-27T10:09:20-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Building a personal website using Jekyll and GitHub Pages</title><link href="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html" rel="alternate" type="text/html" title="Building a personal website using Jekyll and GitHub Pages" /><published>2020-07-27T00:00:00-04:00</published><updated>2020-07-27T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html">&lt;p&gt;GitHub has a feature called &lt;a href=&quot;pages&quot;&gt;Pages&lt;/a&gt; which essentially lets you turn a repository full of &lt;a href=&quot;markdown&quot;&gt;markdown&lt;/a&gt; files into a website (like &lt;a href=&quot;repo&quot;&gt;the one you’re on now&lt;/a&gt;). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-17T00:59:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Building a personal website using Jekyll and GitHub Pages</title><link href="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html" rel="alternate" type="text/html" title="Building a personal website using Jekyll and GitHub Pages" /><published>2020-07-27T00:00:00-04:00</published><updated>2020-07-27T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html">GitHub has a feature called [Pages](pages) which essentially lets you turn a repository full of [markdown](markdown) files into a website (like [the one you're on now](repo)). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It's also free, which fit my budget.
 
-&lt;p&gt;A personal website can be like a digital business card. I use mine as a blog and portfolio of both writing samples and the work I’ve done on the site. It’s a powerful professional tool and an outlet for creativity.&lt;/p&gt;
+A personal website can be like a digital business card. I use mine as a blog and portfolio of both writing samples and the work I've done on the site. It's a powerful professional tool and an outlet for creativity.
 
-&lt;p&gt;If you have some coding experience and don’t mind using command line tools, GitHub Pages and Jekyll might be worth considering if you want to build your own website.&lt;/p&gt;
+If you have some coding experience and don't mind using command line tools, GitHub Pages and Jekyll might be worth considering if you want to build your own website.
 
-&lt;p&gt;Here’s what worked for me:&lt;/p&gt;
+Here's what worked for me:
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#prereqs&quot;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#getting-started&quot;&gt;Follow GitHub’s getting started&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#modify&quot;&gt;Modify the design&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#domain&quot;&gt;Set up a custom domain&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+1. [Prerequisites](#prereqs)
+2. [Follow GitHub's getting started](#getting-started)
+3. [Modify the design](#modify)
+4. [Set up a custom domain](#domain)
 
 &lt;h2 id=&quot;prereqs&quot;&gt;1. Prerequisites&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;git&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;ruby&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;bundler&quot;&gt;Bundler&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+* [Git][git]
+* [Ruby][ruby]
+* [Bundler][bundler]
+* [Jekyll][jekyll]
 
-&lt;p&gt;After installing Git and Ruby, download &lt;a href=&quot;bundler&quot;&gt;Bundler&lt;/a&gt;. Bundler is a utility that manages some backend tasks (like keeping the Ruby gemfiles up to date and making sure Jekyll builds execute properly) to reduce build errors or environment issues.&lt;/p&gt;
+After installing Git and Ruby, download [Bundler][bundler]. Bundler is a utility that manages some backend tasks (like keeping the Ruby gemfiles up to date and making sure Jekyll builds execute properly) to reduce build errors or environment issues.
 
-&lt;p&gt;GitHub recommends using Bundler to install Jekyll. From the root folder of your site project, run the following command:&lt;/p&gt;
+GitHub recommends using Bundler to install Jekyll. From the root folder of your site project, run the following command:
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```
+$ bundle install jekyll
+```
 
 &lt;h2 id=&quot;getting-started&quot;&gt;2. Follow GitHub's getting started&lt;/h2&gt;
 
-&lt;p&gt;Follow &lt;a href=&quot;guide&quot;&gt;the setup guide&lt;/a&gt; on the Pages website:&lt;/p&gt;
+Follow [the setup guide][guide] on the Pages website:
 
-&lt;h4 id=&quot;create-your-repository&quot;&gt;Create your repository.&lt;/h4&gt;
+#### Create your repository.
 
-&lt;p&gt;For individual and organization pages, the repository must be named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io&lt;/code&gt; where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username&lt;/code&gt; is your GitHub username. These websites will publish from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of the repository. Project pages can publish from a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch or a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; folder, but I’m only covering individual/organization pages in this guide.&lt;/p&gt;
+For individual and organization pages, the repository must be named `username.github.io` where `username` is your GitHub username. These websites will publish from the `master` branch of the repository. Project pages can publish from a `gh-pages` branch or a `docs` folder, but I'm only covering individual/organization pages in this guide.
 
-&lt;p&gt;When initially setting up the repository for Pages on GitHub, the instructions walk you through configuration but don’t explicitly say whether or not to create the repo. When you get to that point, initialize with a README (unless you’re importing a repository) and click ‘Create’.&lt;/p&gt;
+When initially setting up the repository for Pages on GitHub, the instructions walk you through configuration but don't explicitly say whether or not to create the repo. When you get to that point, initialize with a README (unless you're importing a repository) and click 'Create'.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/create-repo.png&quot; alt=&quot;create-repo&quot; /&gt;&lt;/p&gt;
+  ![create-repo](/assets/img/blog/2020/building-personal-website-jekyll/create-repo.png)
 
-&lt;h4 id=&quot;create-your-jekyll-site&quot;&gt;Create your Jekyll site&lt;/h4&gt;
+#### Create your Jekyll site
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Using your Git tool of choice, navigate to the root folder containing your soon to be website. Initialize it as a Git repository with the following command, replacing REPOSITORY-NAME with your repository name:&lt;/p&gt;
+1. Using your Git tool of choice, navigate to the root folder containing your soon to be website. Initialize it as a Git repository with the following command, replacing REPOSITORY-NAME with your repository name:
 
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git init REPOSITORY-NAME
- &amp;gt; Initialized empty Git repository in /Users/anthony/mandelliant.github.io/.git/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Because this is a personal/organizational Pages site, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch is your live website. Check you’re on the right branch with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch&lt;/code&gt;.&lt;/p&gt;
+    ```
+    $ git init REPOSITORY-NAME
+    &gt; Initialized empty Git repository in /Users/anthony/mandelliant.github.io/.git/
+    ```
 
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git branch
- &amp;gt; * master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+2. Because this is a personal/organizational Pages site, the `master` branch is your live website. Check you're on the right branch with `git branch`.
 
-    &lt;p&gt;Once you’re in the right folder and on the right branch, use the following Jekyll command to create the website: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll VERSION new .&lt;/code&gt;. Replace VERSION with the &lt;a href=&quot;dependency&quot;&gt;current dependency version GitHub Pages requires&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem&lt;/code&gt; line to: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;github-pages&quot;, &quot;~&amp;gt; VERSION&quot;, group: :jekyll_plugins&lt;/code&gt;, again replacing VERSION with the &lt;a href=&quot;dependency&quot;&gt;current dependency version&lt;/a&gt;. I couldn’t get that to work, so I left off the VERSION entirely and that seemed to do the trick. I’m not necessarily endorsing that as the correct course of action, but I haven’t run into any issues.&lt;/p&gt;
+    ```
+    $ git branch
+    &gt; * master
+    ```
 
-    &lt;p&gt;This is what the relevant lines of my Gemfile look like after updating:&lt;/p&gt;
+    Once you're in the right folder and on the right branch, use the following Jekyll command to create the website: `$ bundle exec jekyll VERSION new .`. Replace VERSION with the [current dependency version GitHub Pages requires][dependency].
 
-    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;# If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and&lt;/span&gt;
- &lt;span class=&quot;c1&quot;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;github-pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;group: :jekyll_plugins&lt;/span&gt;
- &lt;span class=&quot;c1&quot;&gt;# If you have any plugins, put them here!&lt;/span&gt;
- &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-feed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.12&quot;&lt;/span&gt;
- &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+3. Open the Gemfile and follow the instructions in the code comments to configure it for GitHub Pages. The GitHub guide then says to update the `gem` line to: `gem &quot;github-pages&quot;, &quot;~&gt; VERSION&quot;, group: :jekyll_plugins`, again replacing VERSION with the [current dependency version][dependency]. I couldn't get that to work, so I left off the VERSION entirely and that seemed to do the trick. I'm not necessarily endorsing that as the correct course of action, but I haven't run into any issues.
 
-    &lt;p&gt;Save and close the Gemfile.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At this point, GitHub suggests &lt;a href=&quot;testing&quot;&gt;testing your site locally&lt;/a&gt;. Use the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ bundle exec jekyll serve&lt;/code&gt; to run a test server from your computer:&lt;/p&gt;
+    This is what the relevant lines of my Gemfile look like after updating:
 
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ bundle exec jekyll serve
- &amp;gt;  Configuration file: /Users/octocat/my-site/_config.yml
- &amp;gt;            Source: /Users/octocat/my-site
- &amp;gt;       Destination: /Users/octocat/my-site/_site
- &amp;gt; Incremental build: disabled. Enable with --incremental
- &amp;gt;      Generating...
- &amp;gt;                    done in 0.309 seconds.
- &amp;gt; Auto-regeneration: enabled for '/Users/octocat/my-site'
- &amp;gt; Configuration file: /Users/octocat/my-site/_config.yml
- &amp;gt;    Server address: http://127.0.0.1:4000/
- &amp;gt;  Server running... press ctrl-c to stop.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-    &lt;p&gt;In a new browser tab, navigate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; to see your website for the first time.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Connect your local directory with your repository on GitHub.&lt;/p&gt;
+    ```ruby
+    # If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and
+    # uncomment the line below. To upgrade, run `bundle update github-pages`.
+    gem &quot;github-pages&quot;, group: :jekyll_plugins
+    # If you have any plugins, put them here!
+    group :jekyll_plugins do
+      gem &quot;jekyll-feed&quot;, &quot;~&gt; 0.12&quot;
+    end
+    ```
 
-    &lt;p&gt;First, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git remote add origin https://github.com/USER/REPOSITORY.git&lt;/code&gt;, replacing USER with the user account that owns the repository, and REPOSITORY with the name of your GitHub Pages repo.&lt;/p&gt;
+    Save and close the Gemfile.
 
-    &lt;p&gt;Then push the repository to GitHub with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git push -u origin BRANCH&lt;/code&gt;, replacing BRANCH with the name of the branch you’re working on, which should be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+4. At this point, GitHub suggests [testing your site locally][testing]. Use the command `$ bundle exec jekyll serve` to run a test server from your computer:
 
-&lt;p&gt;And that’s it! Your website should now be live at YOURNAME.github.io. You can check by navigating to your repo and opening the settings - if you scroll down, there will be a GitHub Pages section with a link to your site.&lt;/p&gt;
+    ```
+    $ bundle exec jekyll serve
+    &gt;  Configuration file: /Users/octocat/my-site/_config.yml
+    &gt;            Source: /Users/octocat/my-site
+    &gt;       Destination: /Users/octocat/my-site/_site
+    &gt; Incremental build: disabled. Enable with --incremental
+    &gt;      Generating...
+    &gt;                    done in 0.309 seconds.
+    &gt; Auto-regeneration: enabled for '/Users/octocat/my-site'
+    &gt; Configuration file: /Users/octocat/my-site/_config.yml
+    &gt;    Server address: http://127.0.0.1:4000/
+    &gt;  Server running... press ctrl-c to stop.
+    ```
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/click-pages-url-to-preview.png&quot; alt=&quot;pages-url&quot; /&gt;
-&lt;em&gt;&lt;a href=&quot;source&quot;&gt;image source&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+    In a new browser tab, navigate to `localhost:4000` to see your website for the first time.
 
-&lt;p&gt;From there, the GitHub guide offers instructions on &lt;a href=&quot;new-content&quot;&gt;adding new posts and pages&lt;/a&gt; or &lt;a href=&quot;custom-theme&quot;&gt;customizing your theme&lt;/a&gt;.&lt;/p&gt;
+5. Connect your local directory with your repository on GitHub.
+
+    First, run `$ git remote add origin https://github.com/USER/REPOSITORY.git`, replacing USER with the user account that owns the repository, and REPOSITORY with the name of your GitHub Pages repo.
+
+    Then push the repository to GitHub with `$ git push -u origin BRANCH`, replacing BRANCH with the name of the branch you're working on, which should be `master`.
+
+And that's it! Your website should now be live at YOURNAME.github.io. You can check by navigating to your repo and opening the settings - if you scroll down, there will be a GitHub Pages section with a link to your site.
+
+![pages-url](/assets/img/blog/2020/building-personal-website-jekyll/click-pages-url-to-preview.png)
+*[image source][source]*
+
+From there, the GitHub guide offers instructions on [adding new posts and pages][new-content] or [customizing your theme][custom-theme].
+
 
 &lt;h2 id=&quot;modify&quot;&gt;3. Modify the design&lt;/h2&gt;
 
-&lt;p&gt;If you’re like me and unfamiliar with Ruby, different elements called gems control a lot of the configurations and settings; Jekyll layout themes, like the default theme Minima, are gems.&lt;/p&gt;
+If you're like me and unfamiliar with Ruby, different elements called gems control a lot of the configurations and settings; Jekyll layout themes, like the default theme Minima, are gems.
 
-&lt;p&gt;This means much of the HTML laying out your pages is hidden away in the directory where you initially installed Ruby. Unless you selected a different location, the path should be something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:/Ruby26x-64 &amp;gt; lib &amp;gt; ruby &amp;gt; gems &amp;gt; 2.6.0 &amp;gt; gems &amp;gt; minima-2.5.1&lt;/code&gt; for Windows (which should translate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Users/username/.rubies/ruby-2.6.2/bin/ruby&lt;/code&gt; on Mac). From there you can access the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folders and files.&lt;/p&gt;
+This means much of the HTML laying out your pages is hidden away in the directory where you initially installed Ruby. Unless you selected a different location, the path should be something like `C:/Ruby26x-64 &gt; lib &gt; ruby &gt; gems &gt; 2.6.0 &gt; gems &gt; minima-2.5.1` for Windows (which should translate to `/Users/username/.rubies/ruby-2.6.2/bin/ruby` on Mac). From there you can access the `_layouts` and `_includes` folders and files.
 
-&lt;p&gt;You can modify these files to change the layout of your pages from your theme’s default or add elements like the callout box above the main content on my homepage that shows my most recent blog post. But if you only change the local version of the file on your computer, the changes won’t override the default settings GitHub uses to render your site, so the live version of your website will look different than when you &lt;a href=&quot;testing&quot;&gt;test it locally&lt;/a&gt;.&lt;/p&gt;
+You can modify these files to change the layout of your pages from your theme's default or add elements like the callout box above the main content on my homepage that shows my most recent blog post. But if you only change the local version of the file on your computer, the changes won't override the default settings GitHub uses to render your site, so the live version of your website will look different than when you [test it locally][testing].
 
-&lt;p&gt;To override any of these files, all you have to do is create a new version in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder in your website’s root directory (similar to the instructions in the guide on &lt;a href=&quot;custom-theme&quot;&gt;customizing your theme&lt;/a&gt;- you can also look at my website’s &lt;a href=&quot;repo&quot;&gt;repository&lt;/a&gt; as an example).&lt;/p&gt;
+To override any of these files, all you have to do is create a new version in a `_layouts` or `_includes` folder in your website's root directory (similar to the instructions in the guide on [customizing your theme][custom-theme]- you can also look at my website's [repository][repo] as an example).
 
-&lt;h4 id=&quot;modifying-the-homepage&quot;&gt;Modifying the homepage&lt;/h4&gt;
+#### Modifying the homepage
 
-&lt;p&gt;The homepage layout is controlled by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.markdown&lt;/code&gt; file Jekyll placed in your root directory. If you open that file, you’ll notice the layout is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home&lt;/code&gt;.&lt;/p&gt;
+The homepage layout is controlled by the `index.markdown` file Jekyll placed in your root directory. If you open that file, you'll notice the layout is `home`.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/homepage-markdown.png&quot; alt=&quot;homepage&quot; /&gt;&lt;/p&gt;
+![homepage](/assets/img/blog/2020/building-personal-website-jekyll/homepage-markdown.png)
 
-&lt;p&gt;Add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; folder to your root directory, then create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home.html&lt;/code&gt; file inside.&lt;/p&gt;
+Add a `_layouts` folder to your root directory, then create a `home.html` file inside.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/layouts.png&quot; alt=&quot;layouts&quot; /&gt;&lt;/p&gt;
+![layouts](/assets/img/blog/2020/building-personal-website-jekyll/layouts.png)
 
-&lt;p&gt;Copy the contents of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;home.html&lt;/code&gt; file in your local Ruby folder into the new file in your website (or start completely from scratch if you prefer). Now in the file in your website, you can make any changes you want. Add the floating box:&lt;/p&gt;
+Copy the contents of the `home.html` file in your local Ruby folder into the new file in your website (or start completely from scratch if you prefer). Now in the file in your website, you can make any changes you want. Add the floating box:
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/floating-box.png&quot; alt=&quot;floating-box&quot; /&gt;&lt;/p&gt;
+![floating-box](/assets/img/blog/2020/building-personal-website-jekyll/floating-box.png)
 
-&lt;p&gt;&lt;em&gt;The endif tags in this code snippet were causing a Jekyll Liquid syntax error preventing the post from building locally, so you get a screenshot instead. You can find the code &lt;a href=&quot;floating-box-code&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+*The endif tags in this code snippet were causing a Jekyll Liquid syntax error preventing the post from building locally, so you get a screenshot instead. You can find the code [here][floating-box-code].*
 
-&lt;p&gt;Orienting the box on the page and styling the shadow requires some CSS. Create an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Assets&lt;/code&gt; folder in the root directory and add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.scss&lt;/code&gt; file inside to supersede the default CSS that comes with the Minima theme.&lt;/p&gt;
+Orienting the box on the page and styling the shadow requires some CSS. Create an `Assets` folder in the root directory and add a `main.scss` file inside to supersede the default CSS that comes with the Minima theme.
 
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;minima&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+```css
+@import &quot;minima&quot;;
 
-&lt;span class=&quot;nc&quot;&gt;.floating-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;box-shadow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#778899&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ffffff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+.floating-content { padding: 30px 0; flex: 1; border: 1px solid;
+  padding: 10px;
+  margin-right: 50;
+  box-shadow: 5px 10px #778899;
+  background-color: #ffffff;
+}
+```
 
 &lt;h2 id=&quot;domain&quot;&gt;4. Set up a custom domain&lt;/h2&gt;
 
-&lt;p&gt;GitHub makes it really easy to add your own domain for your Pages site. From your repository on GitHub, go to the settings and scroll down to the GitHub Pages section. There will be a field to input a custom domain:&lt;/p&gt;
+GitHub makes it really easy to add your own domain for your Pages site. From your repository on GitHub, go to the settings and scroll down to the GitHub Pages section. There will be a field to input a custom domain:
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/building-personal-website-jekyll/custom-domain.png&quot; alt=&quot;domain&quot; /&gt;&lt;/p&gt;
+![domain](/assets/img/blog/2020/building-personal-website-jekyll/custom-domain.png)
 
-&lt;p&gt;This is my actual domain - thanks to a sweet project called &lt;a href=&quot;hns&quot;&gt;Handshake&lt;/a&gt;, I own the top level domain &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mandelliant/&lt;/code&gt;. If you’re &lt;a href=&quot;hns-sites&quot;&gt;resolving HNS domains&lt;/a&gt;, check out &lt;a href=&quot;writtenby.mandelliant/&quot;&gt;writtenby.mandelliant/&lt;/a&gt;. I plan to write more about Handshake and setting up the domain soon.&lt;/p&gt;
+This is my actual domain - thanks to a sweet project called [Handshake][hns], I own the top level domain `mandelliant/`. If you're [resolving HNS domains][hns-sites], check out &lt;a href=&quot;http://writtenby.mandelliant/&quot;&gt;writtenby.mandelliant/&lt;/a&gt;. I plan to write more about Handshake and setting up the domain soon.
 
-&lt;p&gt;There are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;url&lt;/code&gt; fields in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file in your site’s root directory, and I’m sure there’s a very good reason for them, but it seems like I’m not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has &lt;a href=&quot;github-domain-guide&quot;&gt;instructions&lt;/a&gt; for setting it up and updating your DNS records.&lt;/p&gt;
+There are `baseurl` and `url` fields in the `_config.yml` file in your site's root directory, and I'm sure there's a very good reason for them, but it seems like I'm not having any issues leaving them empty for now. If you have a custom domain you want to use, GitHub has [instructions][github-domain-guide] for setting it up and updating your DNS records.
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;br&gt;
 
-&lt;hr /&gt;
-&lt;p class=&quot;rss-subscribe&quot;&gt;Subscribe &lt;a href=&quot;/feed.xml&quot;&gt;via RSS&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;</content><author><name>Anthony Mandelli</name></author><category term="websites" /><category term="jekyll" /><category term="github pages" /><category term="personal website" /><category term="ruby" /><summary type="html">GitHub has a feature called Pages which essentially lets you turn a repository full of markdown files into a website (like the one you’re on now). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.</summary></entry><entry><title type="html">Hello world</title><link href="http://localhost:4000/updates/2020/07/06/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2020-07-06T00:00:00-04:00</published><updated>2020-07-06T00:00:00-04:00</updated><id>http://localhost:4000/updates/2020/07/06/hello-world</id><content type="html" xml:base="http://localhost:4000/updates/2020/07/06/hello-world.html">### And so it begins
+---
+&lt;p class=&quot;rss-subscribe&quot;&gt;Subscribe &lt;a href=&quot;{{ &quot;/feed.xml&quot; | relative_url }}&quot;&gt;via RSS&lt;/a&gt;&lt;/p&gt;
+---
+
+
+[pages]: https://pages.github.com/
+[markdown]: https://daringfireball.net/projects/markdown/
+[repo]: https://github.com/Mandelliant/mandelliant.github.io
+[jekyll]: https://jekyllrb.com/docs/installation/
+[git]: https://git-scm.com/downloads
+[ruby]: https://www.ruby-lang.org/en/documentation/installation/
+[bundler]: https://bundler.io
+[create-repo]: https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll
+[dependency]: https://pages.github.com/versions/
+[testing]: https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll
+[source]: https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll#creating-a-repository-for-your-site
+[new-content]:https://docs.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll
+[custom-theme]: https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll
+[hns]: https://handshake.org/
+[hns-sites]: https://learn.namebase.io/starting-from-zero/how-to-access-handshake-sites
+[my-site]: writtenby.mandelliant/
+[floating-box-code]: https://github.com/Mandelliant/mandelliant.github.io/blob/master/assets/main.scss
+[github-domain-guide]: https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site</content><author><name>Anthony Mandelli</name></author><category term="websites" /><category term="jekyll" /><category term="github pages" /><category term="personal website" /><category term="ruby" /><summary type="html">GitHub has a feature called Pages which essentially lets you turn a repository full of markdown files into a website (like the one you’re on now). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.</summary></entry><entry><title type="html">Hello world</title><link href="http://localhost:4000/updates/2020/07/06/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2020-07-06T00:00:00-04:00</published><updated>2020-07-06T00:00:00-04:00</updated><id>http://localhost:4000/updates/2020/07/06/hello-world</id><content type="html" xml:base="http://localhost:4000/updates/2020/07/06/hello-world.html">### And so it begins
 
 This website started off as a way to host some of my favorite written pieces that I've worked on over the years.
 

@@ -11,6 +11,6 @@ permalink: /bay-window/
 <br>
 Copy the URLs into a new browser tab to fulfill open requests.
 
-Select a `contract_address` and visit **erasurebay.org/request/`contract_address`** to fulfill an open request.
+To view any request on Erasure Bay, select a `contract_address` and visit **erasurebay.org/request/`contract_address`**.
 
 *Data provided by [Dune Analytics](duneanalytics.com). Refreshes at midnight EST*

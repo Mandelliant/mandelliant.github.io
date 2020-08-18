@@ -9,9 +9,9 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
   <div class="floating-content">
-    <h3 class="post-list-heading">{{ page.list_title | default: "Most recent post:" }}</h3>
+    <h3 class="post-list-heading">{{ page.list_title | default: "Most recent posts:" }}</h3>
     <ul class="post-list">
-      {%- for post in site.posts limit:1 -%}
+      {%- for post in site.posts limit:2 -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>

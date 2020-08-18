@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-17T11:22:09-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Building a personal website using Jekyll and GitHub Pages</title><link href="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html" rel="alternate" type="text/html" title="Building a personal website using Jekyll and GitHub Pages" /><published>2020-07-27T00:00:00-04:00</published><updated>2020-07-27T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html">&lt;p&gt;GitHub has a feature called &lt;a href=&quot;pages&quot;&gt;Pages&lt;/a&gt; which essentially lets you turn a repository full of &lt;a href=&quot;markdown&quot;&gt;markdown&lt;/a&gt; files into a website (like &lt;a href=&quot;repo&quot;&gt;the one you’re on now&lt;/a&gt;). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-18T13:09:06-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mandelli.ant</title><subtitle>Blog and writing samples covering blockchain, cryptoeconomics, product development, data analytics, and digital marketing.</subtitle><author><name>Anthony Mandelli</name></author><entry><title type="html">Configuring Handshake Top-level Domains for GitHub Pages</title><link href="http://localhost:4000/how-to/2020/08/18/configuring-handshake-top-level-domains-for-github-pages.html" rel="alternate" type="text/html" title="Configuring Handshake Top-level Domains for GitHub Pages" /><published>2020-08-18T00:00:00-04:00</published><updated>2020-08-18T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/08/18/configuring-handshake-top-level-domains-for-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/08/18/configuring-handshake-top-level-domains-for-github-pages.html">&lt;h3 id=&quot;a-quick-start-guide-for-dweb-hosting&quot;&gt;A Quick Start Guide for DWeb Hosting&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Originally posted on &lt;a href=&quot;blockchannel&quot;&gt;BlockChannel&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/configuring-handshake-domains-for-github/HNS-GH.png&quot; alt=&quot;Handshake and GitHub&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-handshake&quot;&gt;What is &lt;a href=&quot;handshake&quot;&gt;Handshake&lt;/a&gt;?&lt;/h2&gt;
+&lt;p&gt;Handshake is a decentralized DNS and certificate authority — think &lt;a href=&quot;icann&quot;&gt;Internet Corporation for Assigned Names and Numbers&lt;/a&gt; but with smart contracts instead of people.&lt;/p&gt;
+
+&lt;p&gt;If you’re not familiar with ICANN, it’s a United States nonprofit organization that maintains databases of namespaces and numerical designations on the web; a phone book for the entire internet.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Handshake aims to experiment with new ways the internet can be more secure, resilient, and socially useful with a peer-to-peer system validated by the network’s participants. — &lt;a href=&quot;handshake&quot;&gt;Handshake.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Handshake’s purpose is to remove the need for authorities like ICANN and the registrars that charge rental fees for domain name “ownership.” Instead, Handshake’s permissionless blockchain serves as the source of truth, providing immutable DNS records. This is the coolest part: this means when you buy a domain with Handshake, you actually &lt;em&gt;own&lt;/em&gt; it.&lt;/p&gt;
+
+&lt;p&gt;Once you own a top level domain, naturally you want to do something with it. Here’s how to initially set up a personal website using GitHub Pages and then point your Handshake domain to it.&lt;/p&gt;
+
+&lt;p&gt;If you don’t own a Handshake domain yet, the &lt;a href=&quot;nb-docs&quot;&gt;Namebase docs&lt;/a&gt; walk you through the process.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-a-github-pages-site&quot;&gt;Setting up a GitHub Pages site&lt;/h2&gt;
+
+&lt;p&gt;GitHub Pages lets users turn repositories into websites. There are two kinds of Pages sites: personal and project. Project sites let you turn a specific folder or branch of your repository into a website whereas personal sites require the entire repo and publish from the main branch. This guide is based on a personal GitHub Pages site.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;pages-docs&quot;&gt;GitHub’s official docs&lt;/a&gt; are very helpful; I wrote a &lt;a href=&quot;pages-guide&quot;&gt;step-by-step guide for building a Pages&lt;/a&gt; site as well.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Broadly speaking:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create a new repository on GitHub called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USERNAME.github.io&lt;/code&gt; where USERNAME is your GitHub username.&lt;/li&gt;
+  &lt;li&gt;Go to the repository settings …&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2020/configuring-handshake-domains-for-github/settings-tab.png&quot; alt=&quot;repo-settings&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;… then scroll down to enable GitHub Pages by choosing a publishing source (for personal websites, select the &lt;em&gt;Master&lt;/em&gt; branch) and choosing a theme.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\blog\2020\configuring-handshake-domains-for-github\pages-setting.png&quot; alt=&quot;enable-pages&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.md&lt;/code&gt; file to your repository’s root directory and commit it to your publishing source (which should be the main branch).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;updating-your-github-pages-url-settings&quot;&gt;Updating your GitHub Pages URL settings&lt;/h2&gt;
+
+&lt;p&gt;Once your repository has GitHub Pages enabled, in the Settings tab you’ll now have the option to set a custom domain for your site. As far as GitHub is concerned, it really is as easy as just typing in your Handshake domain and hitting ‘Save.’&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\blog\2020\configuring-handshake-domains-for-github\github-pages-custom-domain-HNS.png&quot; alt=&quot;custom-domain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I chose to set my URL as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;writtenby.mandelliant&lt;/code&gt; but it could have just as easily been &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mandelliant&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuring-your-handshake-top-level-domain&quot;&gt;Configuring your Handshake top level domain&lt;/h2&gt;
+
+&lt;p&gt;Using Namebase, from your dashboard you can manage any domains you own.&lt;/p&gt;
+
+&lt;p&gt;Select the domain you want to use and click the ‘Manage’ button.&lt;/p&gt;
+
+&lt;p&gt;If you have the ability to host your own nameservers, Namebase recommends doing so, otherwise they give you the information you need to use theirs.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Create your NS record:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\blog\2020\configuring-handshake-domains-for-github\NS-record.png&quot; alt=&quot;ns record&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Add your nameserver DNS records:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\blog\2020\configuring-handshake-domains-for-github\HNS-DNS.png&quot; alt=&quot;dns records&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Name field is the subdomain for your website, and the Value/Data field is where the URL should point. I left the default TTL value.&lt;/p&gt;
+
+&lt;p&gt;Your GitHub Pages site should now be accessible from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;subdomain.yourdomain/&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;visiting-handshake-domains&quot;&gt;Visiting Handshake domains&lt;/h2&gt;
+
+&lt;p&gt;There are two ways to see your new domain in action: changing the DNS settings on your browser/device, or using the Handshake search engine &lt;a href=&quot;hns-to&quot;&gt;HNS.to&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Give HNS.to a try by searching for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;welcome.nb&lt;/code&gt; or (shameless plug) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;writtenby.mandelliant&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets\img\blog\2020\configuring-handshake-domains-for-github\HNS.to.gif&quot; alt=&quot;hns to&quot; /&gt;
+&lt;em&gt;gif courtesy of the &lt;a href=&quot;gif-link&quot;&gt;Namebase docs&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to try &lt;a href=&quot;dns-settings&quot;&gt;modifying your DNS settings&lt;/a&gt;, Namebase covers a variety of methods on different platforms / operating systems.&lt;/p&gt;
+
+&lt;p&gt;Happy building! Thank BlockChannel for posting this piece originally by learning more about &lt;a href=&quot;dweb&quot;&gt;what’s to come for the DWeb&lt;/a&gt;.&lt;/p&gt;</content><author><name>Anthony Mandelli</name></author><category term="websites" /><category term="Handshake" /><category term="github pages" /><category term="personal website" /><category term="domains" /><category term="DNS" /><category term="top level domain" /><category term="HNS" /><category term="DWeb" /><category term="hosting" /><summary type="html">A Quick Start Guide for DWeb Hosting</summary></entry><entry><title type="html">Building a personal website using Jekyll and GitHub Pages</title><link href="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html" rel="alternate" type="text/html" title="Building a personal website using Jekyll and GitHub Pages" /><published>2020-07-27T00:00:00-04:00</published><updated>2020-07-27T00:00:00-04:00</updated><id>http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages</id><content type="html" xml:base="http://localhost:4000/how-to/2020/07/27/building-websites-with-jekyll-and-github-pages.html">&lt;p&gt;GitHub has a feature called &lt;a href=&quot;pages&quot;&gt;Pages&lt;/a&gt; which essentially lets you turn a repository full of &lt;a href=&quot;markdown&quot;&gt;markdown&lt;/a&gt; files into a website (like &lt;a href=&quot;repo&quot;&gt;the one you’re on now&lt;/a&gt;). Seeing as I have very little web dev experience but feel relatively comfortable writing markdown, Pages seemed like a great way to get the feel of a custom personal website with GitHub handling most of the nitty-gritty backend details. It’s also free, which fit my budget.&lt;/p&gt;
 
 &lt;p&gt;A personal website can be like a digital business card. I use mine as a blog and portfolio of both writing samples and the work I’ve done on the site. It’s a powerful professional tool and an outlet for creativity.&lt;/p&gt;
 

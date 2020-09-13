@@ -4,7 +4,7 @@ title: "The Bay Window"
 permalink: /bay-window/
 ---
 
-### See open [Erasure Bay](erasurebay.org) requests:
+### See open [Erasure Bay](https://erasurebay.org) requests:
 
 <iframe src="https://explore.duneanalytics.com/embed/query/7984/visualization/15948?api_key=Wqn4LxVZhLOOaJpuavWNXWU1YRuJM8L2DVnxY7co" width="900" height="400"></iframe>
 

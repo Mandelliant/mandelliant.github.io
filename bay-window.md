@@ -4,6 +4,8 @@ title: "The Bay Window"
 permalink: /bay-window/
 ---
 
+:warning: This page needs to be updated to make URLs clickable again.
+
 ### See open [Erasure Bay](https://erasurebay.org) requests:
 
 <iframe src="https://explore.duneanalytics.com/embed/query/7984/visualization/15948?api_key=Wqn4LxVZhLOOaJpuavWNXWU1YRuJM8L2DVnxY7co" width="900" height="400"></iframe>

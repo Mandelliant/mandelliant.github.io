@@ -9,7 +9,7 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
   <div class="floating-content">
-    <h3 class="post-list-heading">{{ page.list_title | default: "Most recent posts:" }}</h3>
+    <h3 class="post-list-heading">{{ page.list_title | default: "Featured posts:" }}</h3>
     <ul class="post-list">
       {%- for post in site.posts limit:2 -%}
       <li>
@@ -34,12 +34,34 @@ layout: default
 
 <h2>Writing samples</h2>
       <h4>
-      <a href="#Blockchannel">Blockchannel</a><br>
-      <a href="#Numerai">Numerai</a><br>
-      <a href="#tq">TQ Tezos</a><br>
+      <a href="#Census">Census</a><br>
       <a href="#sp">Snowplow Analytics</a><br>
-      <a href="#personal">Early personal work</a><br>
+      <a href="#Blockchannel">Blockchannel</a><br>
+      <a href="#tq">TQ Tezos</a><br>
       </h4>
+
+      <div id="section-box">
+      <h3>Census</h3><a name="Census"></a>
+
+      <p>
+      <ul>
+        <li><a href="https://blog.getcensus.com/introduction-to-data-driven-lead-scoring-for-sales-marketing-analysts/">Introduction to data-driven lead scoring for sales & marketing analysts</a></li>
+      </ul>
+      </p>
+      </div>
+
+
+      <div id="section-box">
+      <h3>Snowplow Analytics</h3><a name="sp"></a>
+      <p>
+      <ul>
+        <li><a href="https://snowplowanalytics.com/blog/2021/03/11/privacy-updates-ad-blockers-and-the-need-for-1st-party-tracking/">Privacy updates, ad blockers, and the need for 1st-party tracking</a></li>
+        <li><a href="https://snowplowanalytics.com/blog/2019/02/05/how-data-ownership-makes-you-a-more-effective-data-scientist/">How data ownership makes you a more effective data scientist</a></li>
+        <li><a href="https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/">Product analytics series part one of eight</a></li>
+      </ul>
+      </p>
+      </div>
+
 
       <div id="section-box">
       <h3>Blockchannel</h3><a name="Blockchannel"></a>
@@ -53,21 +75,6 @@ layout: default
       </div>
 
 
-
-      <div id="section-box">
-      <h3>Numerai</h3><a name="Numerai"></a>
-
-      <p>
-      <ul>
-        <li><a href="https://medium.com/numerai/placeholder-thesis-design-update-aliens-exist-620c2459bedb">Erasure April Update</a></li>
-        <li><a href="https://docs.numer.ai/office-hours-with-arbitrage/office-hours-recaps/ohwa-5">Office Hours with Arbitrage, Season 1 Episode 5</a></li>
-        <li><a href="https://docs.numer.ai/office-hours-with-arbitrage/office-hours-recaps-season-2/ohwa-s02e03">Office Hours with Arbitrage, Season 2 Episode 3</a></li>
-      </ul>
-      </p>
-      </div>
-
-
-
       <div id="section-box">
       <h3>TQ Tezos</h3><a name="tq"></a>
 
@@ -79,30 +86,5 @@ layout: default
       </p>
       </div>
 
-
-
-      <div id="section-box">
-      <h3>Snowplow Analytics</h3><a name="sp"></a>
-      <p>
-      <ul>
-        <li><a href="https://snowplowanalytics.com/blog/2019/02/05/how-data-ownership-makes-you-a-more-effective-data-scientist/">How data ownership makes you a more effective data scientist</a></li>
-        <li><a href="https://snowplowanalytics.com/blog/2018/08/08/self-describing-data-becomes-self-policing-data/">Self-describing data becomes self-policing data</a></li>
-        <li><a href="https://snowplowanalytics.com/blog/2018/03/02/understanding-the-role-of-anonymization-and-pseudonymization-in-gdpr">Understanding anonymization and pseudonymization in GDPR compliance</a></li>
-        <li><a href="https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/">Product analytics series part one of eight</a></li>
-      </ul>
-      </p>
-      </div>
-
-
-      <div id="section-box">
-      <h3>Early personal work</h3><a name='personal'></a>
-
-      <p>
-      <ul>
-        <li><a href="https://mandelliant.blogspot.com/2017/04/ethereums-existence-means-bitcoin-worked.html">Ethereum's existence means bitcoin worked</a></li>
-        <li><a href="https://mandelliant.blogspot.com/2017/03/hedging-your-bets.html">Hedging your bets</a>
-      </ul>
-      </p>
-      </div>
 
 </div>

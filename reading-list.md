@@ -5,7 +5,7 @@ permalink: /reading/
 ---
 
 #### Currently reading:
-*The Age of Surveillance Capitalism, Shoshana Zuboff*
+*Capital in the Twenty-First Century, Thomas Piketty*
 
 #### Upcoming:
-*Build a career in data science, Emily Robinson & Jacquelin Nolis*
+*Flashboys, Michael Lewis*

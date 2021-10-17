@@ -44,3 +44,5 @@
 [**Ethereum’s existence means bitcoin worked**](https://mandelliant.blogspot.com/2017/04/ethereums-existence-means-bitcoin-worked.html)
 
 [**Hedging your bets**](https://mandelliant.blogspot.com/2017/03/hedging-your-bets.html)
+
+<h2> Best of Luck 💯 </h2>

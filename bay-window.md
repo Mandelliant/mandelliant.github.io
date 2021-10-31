@@ -4,7 +4,7 @@ title: "The Bay Window"
 permalink: /bay-window/
 ---
 
-:warning: This page needs to be updated to make URLs clickable again.
+:warning: This page is under construction. Update coming 2022.
 
 ### See open [Erasure Bay](https://erasurebay.org) requests:
 

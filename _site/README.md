@@ -2,8 +2,6 @@
 - [Numerai](#Numerai)
 - [TQ Tezos](#tq)
 - [Snowplow Analytics](#sp)
-- [BitClave](#bitclave)
-- [CryptoCoinsNews](#ccn)
 - [Personal Blog](#personal)
 
 ***
@@ -40,26 +38,6 @@
 [**Product analytics series part one**](https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/)
 
 ***
-
-<h2 id='bitclave'>BitClave</h2>
-
-[**Personalization and anonymization**](https://medium.com/@BitClave/personalization-anonymization-3d382b3f1f1b)
-
-[**Blockchain megatrends for 2017**](https://medium.com/@BitClave/blockchain-megatrends-for-2017-799f497632ea)
-
-***
-
-
-<h2 id='ccn'>CryptoCoinsNews</h2>
-
-[**Marijuana industry developer switches to IOTA**](https://www.ccn.com/industry-disruptor-paragon-coin-partners-with-iota)
-
-[**Dash wallet has nearly 2,000 downloads on the iTunes Store**](https://www.ccn.com/dash-ceo-weve-had-nearly-2000-downloads-on-the-apple-app-store)
-
-[**In the search for economic stability, is Bitcoin the saving grace?**](https://www.ccn.com/search-economic-stability-bitcoin-saving-grace)
-
-***
-
 
 <h2 id='personal'>Personal Blog</h2>
 

@@ -235,13 +235,13 @@ button:hover { box-shadow: 0 0 10px #FF6EC7; color: #FF6EC7;
 */
 .box:hover { box-shadow: 0 0 10px #60013c; transform: translateY(-5px); color: #85786f #0f0f0f #de855f #e25822 #fffff1 #9cad9f #748991 #388E3C; }
 
-.hero-image { background-image: url("assetsimgothermoji-hero.png"); background-size: cover; background-position: center; height: 400px; position: relative; }
+.hero-image { background-image: url("/assets/img/other/emoji-hero.png"); background-size: cover; background-position: center; height: 400px; position: relative; z-index: 999; }
 
-.hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; }
+.hero-text { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; }
 
-.hero-text h1 { font-size: 50px; margin-bottom: 10px; }
+.hero-text h1 { font-size: 50px; margin-top: 35px; margin-bottom: 80px; }
 
-.hero-text p { font-size: 24px; margin-bottom: 20px; }
+.hero-text p { font-size: 24px; margin-bottom: 10px; }
 
 .hero-text button { background-color: #fff; color: #333; padding: 10px 20px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; transition: all 0.3s ease; }
 

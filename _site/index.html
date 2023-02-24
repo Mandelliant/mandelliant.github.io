@@ -93,10 +93,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			background-color: #fff;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 			transition: right 0.3s ease-out;
+      z-index: 9998;
 		}
 		.menu ul {
 			list-style: none;
-			margin: 0;
+			margin-top: 50px;
+      margin-left: 30px;
 			padding: 0;
 		}
 		.menu li {
@@ -121,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <body>
 
   
-	<div class="slider">
+	<div class="slider" style="z-index 999">
 		<button class="button" onclick="toggleMenu()">Latest</button>
 		<div class="menu" id="menu">
       <ul class="post-list"><li><span class="post-meta">Feb 24, 2023</span>

@@ -56,7 +56,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archive.html">Post Archive</a><a class="page-link" href="/reading/">Reading list</a></div>
       </nav></div>
 
-	
+	<title>Right-hand Hidden Menu</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			position: relative;
+			height: 100vh;
+		}
+		.button {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 9999;
+			cursor: pointer;
+			background-color: #333;
+			color: #fff;
+			padding: 10px 15px;
+			border-radius: 5px;
+		}
+		.menu {
+			position: fixed;
+			top: 0;
+			right: -300px;
+			width: 300px;
+			height: 100%;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			transition: right 0.3s ease-out;
+      z-index: 9998;
+		}
+		.menu ul {
+			list-style: none;
+			margin-top: 50px;
+      margin-left: 30px;
+			padding: 0;
+		}
+		.menu li {
+			padding: 10px;
+			border-bottom: 1px solid #eee;
+		}
+	</style>
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById('menu');
+			if (menu.style.right === '-300px') {
+				menu.style.right = '0';
+			} else {
+				menu.style.right = '-300px';
+			}
+		}
+	</script>
+
+
+	<div class="slider" style="z-index 999">
+		<button class="button" onclick="toggleMenu()">Latest</button>
+		<div class="menu" id="menu">
+      <ul class="post-list"><li><span class="post-meta">Feb 24, 2023</span>
+          <h3>
+            <a class="post-link" href="/community/2023/02/24/community-in-crypto.html">
+              Community building in the crypto industry
+            </a>
+          </h3></li><li><span class="post-meta">Oct 31, 2022</span>
+          <h3>
+            <a class="post-link" href="/recordings/2022/10/31/coin-metrics-merge-streams.html">
+              Coin Metrics Ethereum Merge Day Live Stream
+            </a>
+          </h3></li><li><span class="post-meta">Aug 18, 2020</span>
+          <h3>
+            <a class="post-link" href="/how-to/2020/08/18/configuring-handshake-top-level-domains-for-github-pages.html">
+              Configuring Handshake Top-level Domains for GitHub Pages
+            </a>
+          </h3></li></ul>
+		</div>
+	</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">

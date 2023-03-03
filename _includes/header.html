@@ -28,5 +28,80 @@
     {%- endif -%}
   </div>
 
-	
+	<title>Right-hand Hidden Menu</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			position: relative;
+			height: 100vh;
+		}
+		.button {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 9999;
+			cursor: pointer;
+			background-color: #333;
+			color: #fff;
+			padding: 10px 15px;
+			border-radius: 5px;
+		}
+		.menu {
+			position: fixed;
+			top: 0;
+			right: -300px;
+			width: 300px;
+			height: 100%;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			transition: right 0.3s ease-out;
+      z-index: 9998;
+		}
+		.menu ul {
+			list-style: none;
+			margin-top: 50px;
+      margin-left: 30px;
+			padding: 0;
+		}
+		.menu li {
+			padding: 10px;
+			border-bottom: 1px solid #eee;
+		}
+	</style>
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById('menu');
+			if (menu.style.right === '-300px') {
+				menu.style.right = '0';
+			} else {
+				menu.style.right = '-300px';
+			}
+		}
+	</script>
+
+
+	<div class="slider" style="z-index 999">
+		<button class="button" onclick="toggleMenu()">Latest</button>
+		<div class="menu" id="menu">
+      <ul class="post-list">
+        {%- for post in site.posts limit:3 -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+		</div>
+	</div>
 </header>

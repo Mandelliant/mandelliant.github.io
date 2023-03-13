@@ -6,6 +6,7 @@
 
 body {
   background-color: #fffff1;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, a, code {
@@ -14,13 +15,19 @@ h1, h2, h3, h4, h5, h6, p, li, a, code {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-shadow: 1px 1px #748991;
-  color: #0f0f0f;
+    color: #0f0f0f;
 }
 
 img {
   border: 1px solid #85786f;
   align: center; 
+}
+
+
+.site-header { 
+  border-bottom: 1px solid #e8e8e8; 
+  min-height: 55.95px; 
+  position: relative; 
 }
 
 /*
@@ -122,9 +129,10 @@ button:hover {
     background-image: url('/assets/img/other/emoji-hero.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 400px;
     position: relative;
-   ;
+    
   }
   
 

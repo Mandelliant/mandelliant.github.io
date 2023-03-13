@@ -9,9 +9,11 @@ categories: recordings
 
 ### Ethereum Merge Day Live Stream
 
+While working at Coin Metrics as the Community Manager, we hosted a live stream leading up to the Ethereum Merge in September, 2021.
+
 ## Watch on Twitter
-[**Part One**](part-one)  
-[**Part Two**](part-two)  
+[**Part One**](https://twitter.com/i/broadcasts/1mrxmkqYYgvGy)  
+[**Part Two**](https://twitter.com/coinmetrics/status/1570231674880786433)  
 
 
 

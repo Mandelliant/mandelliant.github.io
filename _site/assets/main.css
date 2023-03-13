@@ -195,13 +195,15 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
 
-body { background-color: #fffff1; }
+body { background-color: #fffff1; height: 100%; }
 
 h1, h2, h3, h4, h5, h6, p, li, a, code { font-family: 'Courier New', monospace; color: #0f0f0f; }
 
-h1, h2, h3, h4, h5, h6 { text-shadow: 1px 1px #748991; color: #0f0f0f; }
+h1, h2, h3, h4, h5, h6 { color: #0f0f0f; }
 
 img { border: 1px solid #85786f; align: center; }
+
+.site-header { border-bottom: 1px solid #e8e8e8; min-height: 55.95px; position: relative; }
 
 /*
 a { color: #FF6EC7; text-decoration: none;
@@ -235,7 +237,7 @@ button:hover { box-shadow: 0 0 10px #FF6EC7; color: #FF6EC7;
 */
 .box:hover { box-shadow: 0 0 10px #60013c; transform: translateY(-5px); color: #85786f #0f0f0f #de855f #e25822 #fffff1 #9cad9f #748991 #388E3C; }
 
-.hero-image { background-image: url("/assets/img/other/emoji-hero.png"); background-size: cover; background-position: center; height: 400px; position: relative; }
+.hero-image { background-image: url("/assets/img/other/emoji-hero.png"); background-size: cover; background-position: center; background-repeat: no-repeat; height: 400px; position: relative; }
 
 .hero-text { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; }
 

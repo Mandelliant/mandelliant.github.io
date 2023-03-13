@@ -41,7 +41,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQLXWV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><header class="site-header" role="banner">
+<!-- End Google Tag Manager (noscript) --><!DOCTYPE html>
+<html>
+
+<head>
+<header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Mandelli.ant</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -68,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		}
 		.button {
 			position: fixed;
-			top: 20px;
+			top: 15px;
 			right: 20px;
 			z-index: 9999;
 			cursor: pointer;
@@ -76,6 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			color: #fff;
 			padding: 10px 15px;
 			border-radius: 5px;
+      
 		}
 		.menu {
 			position: fixed;
@@ -100,19 +105,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		}
 	</style>
 	<script>
-		function toggleMenu() {
+		
+    document.getElementById("headerButton").onclick = function() {toggleMenu()};
+     
+    function toggleMenu() {
 			var menu = document.getElementById('menu');
 			if (menu.style.right === '-300px') {
 				menu.style.right = '0';
 			} else {
 				menu.style.right = '-300px';
 			}
-		}
+		
+    
+    }
 	</script>
-
+</head>
 
 	<div class="slider" style="z-index 999">
-		<button class="button" onclick="toggleMenu()">Latest</button>
+		<button id="headerButton" class="button" onclick="toggleMenu()">Latest</button>
 		<div class="menu" id="menu">
       <ul class="post-list"><li><span class="post-meta">Feb 24, 2023</span>
           <h3>
@@ -133,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 </header>
-<main class="page-content" aria-label="Content">
+</html><main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post">
 
@@ -144,11 +154,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="post-content">
     <h2 id="anthony-mandelli">Anthony Mandelli</h2>
 
-<p>I’m a technical content marketer with experience in social media, content strategy, and analytics. Currently I work for the blockchain data provider <a href="https://coinmetrics.io">Coin Metrics</a> as Community Manager. In a previous life I was a higher-ed administrator.</p>
+<p>I’m a technical content marketer with experience in social media, content strategy, and analytics. Currently I work in the blockchain and Web3 industry. In a previous life I was a higher-ed administrator.</p>
 
-<p>Topics of interest include privacy-preserving technology, digital sovereignty, distributed education, and using language to make tech more accessible.</p>
-
-<p>Putting truth to work and building the future of finance.</p>
+<p>Topics of interest include privacy-preserving technology, digital sovereignty, distributed education, and using storytelling to make tech more accessible.</p>
 
   </div>
 

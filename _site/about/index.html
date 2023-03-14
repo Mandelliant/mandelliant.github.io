@@ -104,26 +104,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			border-bottom: 1px solid #eee;
 		}
 	</style>
-	<script>
-		
-    document.getElementById("headerButton").onclick = function() {toggleMenu()};
-     
-    function toggleMenu() {
-			var menu = document.getElementById('menu');
-			if (menu.style.right === '-300px') {
-				menu.style.right = '0';
-			} else {
-				menu.style.right = '-300px';
-			}
-		
-    
-    }
-	</script>
+
 </head>
 
 	<div class="slider" style="z-index 999">
 		<button id="headerButton" class="button" onclick="toggleMenu()">Latest</button>
-		<div class="menu" id="menu">
+		<div class="menu" id="menu", style="right: -300px;">
       <ul class="post-list"><li><span class="post-meta">Feb 24, 2023</span>
           <h3>
             <a class="post-link" href="/community/2023/02/24/community-in-crypto.html">
@@ -142,6 +128,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </h3></li></ul>
 		</div>
 	</div>
+	<script>
+		
+    document.getElementById("headerButton").onclick = function() {toggleMenu()};
+     
+    function toggleMenu() {
+			var menu = document.getElementById('menu');
+			if (menu.style.right === '-300px') {
+				menu.style.right = '0';
+			} else {
+				menu.style.right = '-300px';
+			}
+		
+    
+    }
+	</script>
+
 </header>
 </html><main class="page-content" aria-label="Content">
       <div class="wrapper">

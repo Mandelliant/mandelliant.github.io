@@ -4,9 +4,12 @@
   --primary-dark: #4B0082;
   --text-color: #E6E6FA;
   --text-secondary: #B3A4C7;
-  --background-dark: #0B0B0C;
+  --text-grey: #A0A0A0;
+  --background-dark: #000000;
   --background-light: #111;
   --accent-color: #C586FF;
+  --link-color: #B57EDC;
+  --link-visited: #4B0082;
   --border-radius: 16px;
   --transition-speed: 0.3s;
 }
@@ -15,6 +18,10 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  background-color: var(--background-dark);
+}
+
+.wrapper {
   background-color: var(--background-dark);
 }
 
@@ -64,15 +71,20 @@ body {
 
 .post-content p,
 .post-content li {
-  color: var(--text-color);
+  color: var(--text-grey);
   margin-bottom: 1.5rem;
 }
 
 .post-content a {
-  color: var(--accent-color);
+  color: var(--link-color);
   text-decoration: none;
-  border-bottom: 1px dotted var(--accent-color);
+  border-bottom: 1px dotted var(--link-color);
   transition: all var(--transition-speed) ease;
+}
+
+.post-content a:visited {
+  color: var(--link-visited);
+  border-bottom: 1px dotted var(--link-visited);
 }
 
 .post-content a:hover {
@@ -162,13 +174,40 @@ body {
 }
 
 #section-box a {
-  color: var(--text-color);
+  color: var(--link-color);
   text-decoration: none;
   transition: color var(--transition-speed) ease;
 }
 
+#section-box a:visited {
+  color: var(--link-visited);
+}
+
 #section-box a:hover {
-  color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Home page specific styles */
+.home {
+  background-color: var(--background-dark);
+}
+
+.home h2, .home h3, .home h4 {
+  color: var(--text-color);
+}
+
+.home a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.home a:visited {
+  color: var(--link-visited);
+}
+
+.home a:hover {
+  color: var(--text-color);
 }
 
 /* 404 page styles */

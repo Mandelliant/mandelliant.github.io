@@ -294,4 +294,43 @@ body, html {
     grid-template-columns: 1fr;
   }
 }
+
+/* Blog page styles */
+.blog-posts {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-posts .post {
+  margin-bottom: 3rem;
+}
+
+.blog-posts .post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-posts .post-title a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.blog-posts .post-title a:hover {
+  color: var(--text-color);
+}
+
+.blog-posts .read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-speed) ease;
+}
+
+.blog-posts .read-more:hover {
+  color: var(--text-color);
+}
 </style> 

@@ -1,136 +1,76 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NFQLXWV');</script>
-  <!-- End Google Tag Manager -->
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mandelli.ant | Personal blog and writing on blockchain, data, and tech</title>
-  <meta name="description" content="Personal blog and published pieces covering blockchain, product development, and analytics.">
-  <meta name="author" content="Anthony Mandelli">
-  <meta property="og:title" content="Mandelli.ant" />
-  <meta property="og:description" content="Personal blog and writing on blockchain, product development, and analytics." />
-  <meta property="og:url" content="https://mandelliant.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mandelli.ant" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Mandelli.ant" />
-  <link rel="canonical" href="https://mandelliant.github.io/" />
-  <link rel="stylesheet" href="/assets/main.css">
-  <link type="application/atom+xml" rel="alternate" href="https://mandelliant.github.io/feed.xml" title="Mandelli.ant" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Anthony Mandelli</h1>
+    <p>Blockchain & technology storytelling.</p>
+  </div>
+</div>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQLXWV"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <header class="site-header" role="banner">
-    <div class="wrapper">
-      <a class="site-title" rel="author" href="/">Mandelli.ant</a>
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484S0.665,0,1.484,0h15.032C17.335,0,18,0.665,18,1.484zM18,7.516c0,0.819-0.665,1.484-1.484,1.484H1.484C0.665,9,0,8.335,0,7.516s0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516zM18,13.516c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,15,0,14.335,0,13.516s0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-        <div class="trigger">
-          <a class="page-link" href="/about/">About</a>
-          <a class="page-link" href="/archive.html">Post Archive</a>
-          <a class="page-link" href="/reading/">Reading list</a>
-        </div>
-      </nav>
+<div class="wrapper">
+  <div class="home">
+    {% if site.posts.size > 0 %}
+    <div class="floating-content">
+      <h3 class="post-list-heading">{{ page.list_title | default: "Featured post:" }}</h3>
+      <ul class="post-list">
+        {% for post in site.posts limit:1 %}
+        <li class="post">
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          {% if site.show_excerpts %}
+            {{ post.excerpt }}
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-  </header>
+    {% endif %}
 
-  <main class="page-content" aria-label="Content">
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>Anthony Mandelli</h1>
-        <p>Blockchain & technology storytelling.</p>
+    <h2>Writing samples</h2>
+    <h4>
+      <a href="#Census">Census</a> |
+      <a href="#sp">Snowplow Analytics</a> |
+      <a href="#Blockchannel">Blockchannel</a> |
+      <a href="#tq">TQ Tezos</a>
+    </h4>
+
+    <div class="container">
+      <div id="section-box" class="post">
+        <h3><a name="Census">Census</a></h3>
+        <ul>
+          <li><a href="https://blog.getcensus.com/introduction-to-data-driven-lead-scoring-for-sales-marketing-analysts/">Introduction to data-driven lead scoring for sales & marketing analysts</a></li>
+        </ul>
+      </div>
+
+      <div id="section-box" class="post">
+        <h3><a name="sp">Snowplow Analytics</a></h3>
+        <ul>
+          <li><a href="https://snowplowanalytics.com/blog/2021/03/11/privacy-updates-ad-blockers-and-the-need-for-1st-party-tracking/">Privacy updates, ad blockers, and the need for 1st-party tracking</a></li>
+          <li><a href="https://snowplowanalytics.com/blog/2019/02/05/how-data-ownership-makes-you-a-more-effective-data-scientist/">How data ownership makes you a more effective data scientist</a></li>
+          <li><a href="https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/">Product analytics series part one of eight</a></li>
+        </ul>
+      </div>
+
+      <div id="section-box" class="post">
+        <h3><a name="Blockchannel">Blockchannel</a></h3>
+        <ul>
+          <li><a href="https://medium.com/blockchannel/stop-renting-buy-top-level-domains-with-bob-wallet-16a25acfbd76">Stop renting: buy top-level domains with Bob Wallet</a></li>
+          <li><a href="https://medium.com/blockchannel/sexy-second-level-domains-for-your-substack-with-handshake-8de2155a2f52">Sexy second-level domains for your Substack with Handshake</a></li>
+        </ul>
+      </div>
+
+      <div id="section-box" class="post">
+        <h3><a name="tq">TQ Tezos</a></h3>
+        <ul>
+          <li><a href="https://medium.com/tqtezos/1-300-new-tezos-developers-trained-in-2019-31b0719186dd">1,300+ New Tezos Developers Trained in 2019</a></li>
+          <li><a href="https://medium.com/tqtezos/preparing-for-aztec-ignition-662610c1801b">Preparing for AZTEC Ignition</a></li>
+        </ul>
       </div>
     </div>
-
-    <div class="wrapper">
-      <div class="home">
-        {% if site.posts.size > 0 %}
-        <div class="floating-content">
-          <h3 class="post-list-heading">{{ page.list_title | default: "Featured post:" }}</h3>
-          <ul class="post-list">
-            {% for post in site.posts limit:1 %}
-            <li class="post">
-              {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-              <span class="post-meta">{{ post.date | date: date_format }}</span>
-              <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-              </h3>
-              {% if site.show_excerpts %}
-                {{ post.excerpt }}
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-
-        <h2>Writing samples</h2>
-        <h4>
-          <a href="#Census">Census</a> |
-          <a href="#sp">Snowplow Analytics</a> |
-          <a href="#Blockchannel">Blockchannel</a> |
-          <a href="#tq">TQ Tezos</a>
-        </h4>
-
-        <div class="container">
-          <div id="section-box" class="post">
-            <h3><a name="Census">Census</a></h3>
-            <ul>
-              <li><a href="https://blog.getcensus.com/introduction-to-data-driven-lead-scoring-for-sales-marketing-analysts/">Introduction to data-driven lead scoring for sales & marketing analysts</a></li>
-            </ul>
-          </div>
-
-          <div id="section-box" class="post">
-            <h3><a name="sp">Snowplow Analytics</a></h3>
-            <ul>
-              <li><a href="https://snowplowanalytics.com/blog/2021/03/11/privacy-updates-ad-blockers-and-the-need-for-1st-party-tracking/">Privacy updates, ad blockers, and the need for 1st-party tracking</a></li>
-              <li><a href="https://snowplowanalytics.com/blog/2019/02/05/how-data-ownership-makes-you-a-more-effective-data-scientist/">How data ownership makes you a more effective data scientist</a></li>
-              <li><a href="https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/">Product analytics series part one of eight</a></li>
-            </ul>
-          </div>
-
-          <div id="section-box" class="post">
-            <h3><a name="Blockchannel">Blockchannel</a></h3>
-            <ul>
-              <li><a href="https://medium.com/blockchannel/stop-renting-buy-top-level-domains-with-bob-wallet-16a25acfbd76">Stop renting: buy top-level domains with Bob Wallet</a></li>
-              <li><a href="https://medium.com/blockchannel/sexy-second-level-domains-for-your-substack-with-handshake-8de2155a2f52">Sexy second-level domains for your Substack with Handshake</a></li>
-            </ul>
-          </div>
-
-          <div id="section-box" class="post">
-            <h3><a name="tq">TQ Tezos</a></h3>
-            <ul>
-              <li><a href="https://medium.com/tqtezos/1-300-new-tezos-developers-trained-in-2019-31b0719186dd">1,300+ New Tezos Developers Trained in 2019</a></li>
-              <li><a href="https://medium.com/tqtezos/preparing-for-aztec-ignition-662610c1801b">Preparing for AZTEC Ignition</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-</body>
-</html>
+  </div>
+</div>

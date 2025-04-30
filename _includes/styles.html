@@ -21,8 +21,18 @@ body {
   background-color: var(--background-dark);
 }
 
+body, html {
+  background-color: var(--background-dark);
+}
+
 .wrapper {
   background-color: var(--background-dark);
+}
+
+.page-content {
+  background-color: var(--background-dark);
+  padding: 0;
+  margin: 0;
 }
 
 .post {
@@ -190,6 +200,7 @@ body {
 /* Home page specific styles */
 .home {
   background-color: var(--background-dark);
+  color: var(--text-color);
 }
 
 .home h2, .home h3, .home h4 {
@@ -207,6 +218,30 @@ body {
 }
 
 .home a:hover {
+  color: var(--text-color);
+}
+
+.home .post-list {
+  background-color: var(--background-dark);
+}
+
+.home .post-list-heading {
+  color: var(--text-color);
+}
+
+.home .post-meta {
+  color: var(--text-secondary);
+}
+
+.home .post-link {
+  color: var(--link-color);
+}
+
+.home .post-link:visited {
+  color: var(--link-visited);
+}
+
+.home .post-link:hover {
   color: var(--text-color);
 }
 

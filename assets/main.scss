@@ -13,7 +13,7 @@
 }
 
 /* Global Styles */
-body {
+html, body {
   background-color: var(--background-dark) !important;
   color: var(--text-color);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -22,6 +22,19 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+.wrapper {
+  background-color: var(--background-dark) !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-content {
+  background-color: var(--background-dark) !important;
+  padding: 0;
+  margin: 0;
 }
 
 /* Typography */

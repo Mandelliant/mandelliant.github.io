@@ -1,120 +1,49 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-
-    {%- if page_paths -%}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
-    {%- endif -%}
+<header class="site-header">
+  <div class="wrapper header-wrapper">
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      {{ site.title }}
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about' | relative_url }}">About</a>
+      <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/contact' | relative_url }}">Contact</a>
+    </nav>
   </div>
-
-	<title>Right-hand Hidden Menu</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-		.container {
-			position: relative;
-			height: 100vh;
-		}
-		.button {
-			position: fixed;
-			top: 15px;
-			right: 20px;
-			z-index: 9999;
-			cursor: pointer;
-			background-color: #333;
-			color: #fff;
-			padding: 10px 15px;
-			border-radius: 5px;
-      
-		}
-		.menu {
-			position: fixed;
-			top: 0;
-			right: -300px;
-			width: 300px;
-			height: 100%;
-			background-color: #fff;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-			transition: right 0.3s ease-out;
-      z-index: 9998;
-		}
-		.menu ul {
-			list-style: none;
-			margin-top: 50px;
-      margin-left: 30px;
-			padding: 0;
-		}
-		.menu li {
-			padding: 10px;
-			border-bottom: 1px solid #eee;
-		}
-	</style>
-
-</head>
-
-	<div class="slider" style="z-index 999">
-		<button id="headerButton" class="button" onclick="toggleMenu()">Latest</button>
-		<div class="menu" id="menu", style="right: -300px;">
-      <ul class="post-list">
-        {%- for post in site.posts limit:3 -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-		</div>
-	</div>
-	<script>
-		
-    document.getElementById("headerButton").onclick = function() {toggleMenu()};
-     
-    function toggleMenu() {
-			var menu = document.getElementById('menu');
-			if (menu.style.right === '-300px') {
-				menu.style.right = '0';
-			} else {
-				menu.style.right = '-300px';
-			}
-		
-    
-    }
-	</script>
-
 </header>
-</html>
+
+<style>
+.site-header {
+  background-color: #000;
+  border-bottom: 2px solid #4B0082;
+  padding: 1rem 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: #E6E6FA;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav a {
+  margin-left: 1.2rem;
+  color: #E6E6FA;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #B57EDC;
+}
+</style>

@@ -1,35 +1,33 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
+<footer class="site-footer">
+  <div class="wrapper footer-wrapper">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <p><a href="https://github.com/Mandelliant" target="_blank">GitHub</a></p>
   </div>
-
 </footer>
+
+<style>
+.site-footer {
+  background-color: #111;
+  border-top: 2px solid #4B0082;
+  color: #E6E6FA;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #B57EDC;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #E6E6FA;
+}
+</style>

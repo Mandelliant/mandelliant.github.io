@@ -11,8 +11,11 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+        </span>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -25,3 +28,49 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<style>
+.post {
+  background-color: #0B0B0C;
+  color: #E6E6FA;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(186, 85, 211, 0.2);
+  margin-bottom: 2rem;
+}
+
+.post-header {
+  border-bottom: 2px solid #6A0DAD;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  color: #B57EDC;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: #B3A4C7;
+  font-size: 0.95rem;
+}
+
+.post-content p,
+.post-content li {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #D8BFD8;
+}
+
+.post-content a {
+  color: #C586FF;
+  text-decoration: none;
+  border-bottom: 1px dotted #C586FF;
+}
+
+.post-content a:hover {
+  color: #E6E6FA;
+  border-bottom: 1px solid #E6E6FA;
+}
+</style>

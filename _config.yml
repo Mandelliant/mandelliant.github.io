@@ -29,7 +29,6 @@ twitter_username: mandelliant
 github_username:  mandelliant
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 

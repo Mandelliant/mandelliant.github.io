@@ -12,9 +12,18 @@
   --accent-color: #C586FF;
   --link-color: #B57EDC;
   --link-visited: #4B0082;
+  --border-radius: 16px;
+  --transition-speed: 0.3s;
 }
 
 /* Global Styles */
+html {
+  background-color: var(--background-dark);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 body {
   background-color: var(--background-dark);
   color: var(--text-color);
@@ -24,6 +33,14 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+.wrapper {
+  background-color: var(--background-dark);
+}
+
+.page-content {
+  background-color: var(--background-dark);
 }
 
 /* Typography */

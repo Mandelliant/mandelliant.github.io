@@ -1,19 +1,42 @@
-// Custom styles for Mandelli.ant
-.post {
-  background-color: $code-background-color;
+// Custom styles that override Minima components
+.site-header {
+  background: $background-color;
+  border-bottom: 2px solid $brand-color;
+}
+
+.site-title, .site-title:visited {
   color: $text-color;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba($brand-color, 0.1);
 }
 
-.hero-text h1 {
-  color: $text-color !important;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin: 0 0 1rem;
+.site-nav .page-link {
+  color: $text-color;
 }
 
-// Add other custom styles as needed 
+.site-nav .page-link:hover {
+  color: $brand-color-light;
+}
+
+.post {
+  background: $background-light;
+  border: 1px solid $brand-color;
+}
+
+.post-title {
+  color: $brand-color-light;
+}
+
+.post-content {
+  color: $text-grey;
+}
+
+.post-content a {
+  color: $link-base-color;
+}
+
+.post-content a:visited {
+  color: $brand-color;
+}
+
+.post-content a:hover {
+  color: $text-color;
+} 

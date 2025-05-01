@@ -2,33 +2,13 @@
   "minima/skins/custom-dark",
   "minima/initialize";
 
-/* Color Variables */
-:root {
-  --primary-color: #B57EDC;
-  --primary-dark: #4B0082;
-  --text-color: #E6E6FA;
-  --text-secondary: #B3A4C7;
-  --text-grey: #A0A0A0;
-  --background-dark: #000000;
-  --background-light: #303030;
-  --accent-color: #C586FF;
-  --link-color: #B57EDC;
-  --link-visited: #4B0082;
-  --border-radius: 16px;
-  --transition-speed: 0.3s;
-}
-
 /* Global Styles */
-html {
-  background-color: var(--background-dark);
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+html, body, .wrapper, .page-content {
+  background-color: $background-color !important;
+  color: $text-color;
 }
 
 body {
-  background-color: var(--background-dark) !important;
-  color: var(--text-color);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: clamp(16px, 2.5vw, 18px);
   line-height: 1.6;
@@ -37,17 +17,9 @@ body {
   min-height: 100vh;
 }
 
-.wrapper {
-  background-color: var(--background-dark) !important;
-}
-
-.page-content {
-  background-color: var(--background-dark) !important;
-}
-
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
+  color: $text-color;
   line-height: 1.2;
   margin: 0 0 0.5em;
 }
@@ -65,29 +37,29 @@ h3 {
 }
 
 p, li, code {
-  color: var(--text-grey);
+  color: $text-grey;
   font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 a {
-  color: var(--link-color);
+  color: $link-base-color;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:visited {
-  color: var(--link-visited);
+  color: $brand-color;
 }
 
 a:hover,
 a:focus {
-  color: var(--text-color);
+  color: $text-color;
   text-decoration: none;
 }
 
 /* Images */
 img {
-  border: 2px solid var(--primary-dark);
+  border: 2px solid $brand-color;
   border-radius: 8px;
   display: block;
   margin: 1rem auto;
@@ -96,8 +68,8 @@ img {
 
 /* Header */
 .site-header {
-  background: var(--background-dark);
-  border-bottom: 2px solid var(--primary-dark);
+  background: $background-color;
+  border-bottom: 2px solid $brand-color;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -115,17 +87,17 @@ img {
 .site-title {
   font-size: clamp(1.5rem, 3vw, 1.75rem);
   font-weight: 700;
-  color: var(--text-color);
+  color: $text-color;
 }
 
 .site-nav .page-link {
   margin-left: 1.5rem;
   font-size: clamp(1rem, 2vw, 1.1rem);
-  color: var(--text-color);
+  color: $text-color;
 }
 
 .site-nav .page-link:hover {
-  color: var(--primary-color);
+  color: $brand-color-light;
 }
 
 /* Grid Container */
@@ -140,8 +112,8 @@ img {
 
 /* Post Cards */
 .post {
-  background: var(--background-light);
-  border: 1px solid var(--primary-dark);
+  background: $background-light;
+  border: 1px solid $brand-color;
   border-radius: 12px;
   padding: 1.5rem;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
@@ -164,14 +136,14 @@ img {
 
 .post li::before {
   content: "→";
-  color: var(--primary-color);
+  color: $brand-color-light;
   margin-right: 0.5rem;
 }
 
 /* Featured Post */
 .floating-content {
-  background: var(--background-light);
-  border: 1px solid var(--primary-dark);
+  background: $background-light;
+  border: 1px solid $brand-color;
   border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem 0;
@@ -205,7 +177,7 @@ img {
 
 .hero-text {
   text-align: center;
-  color: #111;
+  color: $text-color;
 }
 
 .hero-text h1 {

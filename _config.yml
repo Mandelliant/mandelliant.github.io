@@ -37,6 +37,11 @@ plugins:
 minima:
   skin: dark
 
+# SASS configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
+
 #Google analytics
 google_analytics: UA-93189501-2
 

@@ -1,0 +1,11 @@
+@import
+  "minima/skins/custom",
+  "minima/initialize";
+
+// Custom styles
+html, body, .wrapper, .page-content {
+  background-color: $background-color !important;
+}
+
+// Import custom styles
+@import "minima/custom-styles"; 

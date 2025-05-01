@@ -35,7 +35,7 @@ plugins:
 
 # Override theme defaults
 minima:
-  skin: dark
+  skin: custom
 
 # SASS configuration
 sass:

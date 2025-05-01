@@ -33,6 +33,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Override theme defaults
+minima:
+  skin: dark
+
 #Google analytics
 google_analytics: UA-93189501-2
 

@@ -5,6 +5,7 @@ theme = 'PaperMod'
 
 [params]
   defaultTheme = "auto"
+  defaultAppearance = "light"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -16,6 +17,20 @@ theme = 'PaperMod'
   ShowToc = true
   TocOpen = false
   ShowPageNums = true
+  
+  # Custom colors
+  [params.homeInfoParams]
+    Title = "Welcome"
+    Content = "Professional writer and technologist passionate about blockchain and digital innovation"
+  
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
 
 [menu]
   [[menu.main]]
@@ -40,4 +55,8 @@ theme = 'PaperMod'
     weight = 40
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"] 
+  home = ["HTML", "RSS", "JSON"]
+
+# Custom CSS
+[params.customCSS]
+  custom = "css/custom.css" 

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home on Mandelliant</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Mandelliant</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;professional-background&#34;&gt;Professional Background&lt;/h2&gt;
+&lt;p&gt;I am a professional writer and technologist with expertise in blockchain technology, product development, data analytics, and digital marketing. My work combines technical knowledge with creative storytelling to make complex topics accessible and engaging.&lt;/p&gt;
+&lt;h2 id=&#34;areas-of-expertise&#34;&gt;Areas of Expertise&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Blockchain Technology&lt;/strong&gt;: Deep understanding of blockchain systems, smart contracts, and decentralized applications&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product Development&lt;/strong&gt;: Experience in building and scaling digital products&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Analytics&lt;/strong&gt;: Proficient in data analysis and visualization&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Digital Marketing&lt;/strong&gt;: Strategic approach to content marketing and audience engagement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;writing-experience&#34;&gt;Writing Experience&lt;/h2&gt;
+&lt;p&gt;I have published numerous articles on technology, blockchain, and digital innovation. My writing aims to bridge the gap between technical concepts and practical applications, making complex topics accessible to a broad audience.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="professional-background">Professional Background</h2>
+<p>I am a professional writer and technologist with expertise in blockchain technology, product development, data analytics, and digital marketing. My work combines technical knowledge with creative storytelling to make complex topics accessible and engaging.</p>
+<h2 id="areas-of-expertise">Areas of Expertise</h2>
+<ul>
+<li><strong>Blockchain Technology</strong>: Deep understanding of blockchain systems, smart contracts, and decentralized applications</li>
+<li><strong>Product Development</strong>: Experience in building and scaling digital products</li>
+<li><strong>Data Analytics</strong>: Proficient in data analysis and visualization</li>
+<li><strong>Digital Marketing</strong>: Strategic approach to content marketing and audience engagement</li>
+</ul>
+<h2 id="writing-experience">Writing Experience</h2>
+<p>I have published numerous articles on technology, blockchain, and digital innovation. My writing aims to bridge the gap between technical concepts and practical applications, making complex topics accessible to a broad audience.</p>
+<h2 id="contact">Contact</h2>
+<p>Feel free to reach out for collaborations, speaking engagements, or consulting opportunities. I&rsquo;m always interested in connecting with fellow professionals in the technology and writing space.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/technology/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/technology/</guid>
+      <description>&lt;h2 id=&#34;technical-expertise&#34;&gt;Technical Expertise&lt;/h2&gt;
+&lt;h3 id=&#34;blockchain-development&#34;&gt;Blockchain Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Smart contract development&lt;/li&gt;
+&lt;li&gt;DApp architecture&lt;/li&gt;
+&lt;li&gt;Blockchain integration&lt;/li&gt;
+&lt;li&gt;Web3 technologies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;data-analytics&#34;&gt;Data Analytics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data visualization&lt;/li&gt;
+&lt;li&gt;Statistical analysis&lt;/li&gt;
+&lt;li&gt;Business intelligence&lt;/li&gt;
+&lt;li&gt;Machine learning applications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;product-development&#34;&gt;Product Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Agile methodologies&lt;/li&gt;
+&lt;li&gt;User experience design&lt;/li&gt;
+&lt;li&gt;Product strategy&lt;/li&gt;
+&lt;li&gt;Technical architecture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;digital-marketing&#34;&gt;Digital Marketing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SEO optimization&lt;/li&gt;
+&lt;li&gt;Content strategy&lt;/li&gt;
+&lt;li&gt;Analytics and tracking&lt;/li&gt;
+&lt;li&gt;Marketing automation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;featured-projects&#34;&gt;Featured Projects&lt;/h2&gt;
+&lt;h3 id=&#34;blockchain-domain-system&#34;&gt;Blockchain Domain System&lt;/h3&gt;
+&lt;p&gt;A decentralized domain name system built on blockchain technology, providing secure and censorship-resistant domain registration.&lt;/p&gt;
+&lt;h3 id=&#34;data-analytics-pipeline&#34;&gt;Data Analytics Pipeline&lt;/h3&gt;
+&lt;p&gt;An automated data processing pipeline that transforms raw data into actionable insights for business decision-making.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="technical-expertise">Technical Expertise</h2>
+<h3 id="blockchain-development">Blockchain Development</h3>
+<ul>
+<li>Smart contract development</li>
+<li>DApp architecture</li>
+<li>Blockchain integration</li>
+<li>Web3 technologies</li>
+</ul>
+<h3 id="data-analytics">Data Analytics</h3>
+<ul>
+<li>Data visualization</li>
+<li>Statistical analysis</li>
+<li>Business intelligence</li>
+<li>Machine learning applications</li>
+</ul>
+<h3 id="product-development">Product Development</h3>
+<ul>
+<li>Agile methodologies</li>
+<li>User experience design</li>
+<li>Product strategy</li>
+<li>Technical architecture</li>
+</ul>
+<h3 id="digital-marketing">Digital Marketing</h3>
+<ul>
+<li>SEO optimization</li>
+<li>Content strategy</li>
+<li>Analytics and tracking</li>
+<li>Marketing automation</li>
+</ul>
+<h2 id="featured-projects">Featured Projects</h2>
+<h3 id="blockchain-domain-system">Blockchain Domain System</h3>
+<p>A decentralized domain name system built on blockchain technology, providing secure and censorship-resistant domain registration.</p>
+<h3 id="data-analytics-pipeline">Data Analytics Pipeline</h3>
+<p>An automated data processing pipeline that transforms raw data into actionable insights for business decision-making.</p>
+<h3 id="digital-marketing-platform">Digital Marketing Platform</h3>
+<p>A comprehensive marketing automation platform that streamlines campaign management and analytics.</p>
+<h2 id="skills">Skills</h2>
+<h3 id="languages">Languages</h3>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>Solidity</li>
+<li>SQL</li>
+</ul>
+<h3 id="frameworks--tools">Frameworks &amp; Tools</h3>
+<ul>
+<li>React</li>
+<li>Node.js</li>
+<li>TensorFlow</li>
+<li>Docker</li>
+</ul>
+<h3 id="platforms">Platforms</h3>
+<ul>
+<li>AWS</li>
+<li>Google Cloud</li>
+<li>Ethereum</li>
+<li>Linux</li>
+</ul>
+<h2 id="get-in-touch">Get in Touch</h2>
+<p>Interested in collaborating on a project? Let&rsquo;s discuss how we can work together to build innovative solutions.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>http://localhost:1313/writing/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/writing/</guid>
+      <description>&lt;h2 id=&#34;featured-articles&#34;&gt;Featured Articles&lt;/h2&gt;
+&lt;h3 id=&#34;blockchain-and-technology&#34;&gt;Blockchain and Technology&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Understanding Smart Contracts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;The Future of Decentralized Finance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Blockchain in Supply Chain Management&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;product-development&#34;&gt;Product Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Building User-Centric Products&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;The Role of Data in Product Decisions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Scaling Digital Products&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;digital-marketing&#34;&gt;Digital Marketing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Content Strategy for Tech Companies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;SEO Best Practices for 2024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;link-to-article&#34;&gt;Social Media for B2B&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;writing-services&#34;&gt;Writing Services&lt;/h2&gt;
+&lt;p&gt;I offer professional writing services for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technical documentation&lt;/li&gt;
+&lt;li&gt;Blog posts and articles&lt;/li&gt;
+&lt;li&gt;Whitepapers&lt;/li&gt;
+&lt;li&gt;Case studies&lt;/li&gt;
+&lt;li&gt;Content strategy consulting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contact me to discuss your writing needs and how I can help bring your ideas to life.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="featured-articles">Featured Articles</h2>
+<h3 id="blockchain-and-technology">Blockchain and Technology</h3>
+<ul>
+<li><a href="link-to-article">Understanding Smart Contracts</a></li>
+<li><a href="link-to-article">The Future of Decentralized Finance</a></li>
+<li><a href="link-to-article">Blockchain in Supply Chain Management</a></li>
+</ul>
+<h3 id="product-development">Product Development</h3>
+<ul>
+<li><a href="link-to-article">Building User-Centric Products</a></li>
+<li><a href="link-to-article">The Role of Data in Product Decisions</a></li>
+<li><a href="link-to-article">Scaling Digital Products</a></li>
+</ul>
+<h3 id="digital-marketing">Digital Marketing</h3>
+<ul>
+<li><a href="link-to-article">Content Strategy for Tech Companies</a></li>
+<li><a href="link-to-article">SEO Best Practices for 2024</a></li>
+<li><a href="link-to-article">Social Media for B2B</a></li>
+</ul>
+<h2 id="writing-services">Writing Services</h2>
+<p>I offer professional writing services for:</p>
+<ul>
+<li>Technical documentation</li>
+<li>Blog posts and articles</li>
+<li>Whitepapers</li>
+<li>Case studies</li>
+<li>Content strategy consulting</li>
+</ul>
+<p>Contact me to discuss your writing needs and how I can help bring your ideas to life.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

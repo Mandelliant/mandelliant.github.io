@@ -21,46 +21,53 @@
 title: Mandelli.ant
 author: Anthony Mandelli
 email: mandelliant@protonmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Personal blog and published pieces covering blockchain, cryptocurrencies, product development, data analytics, and digital marketing.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: >- 
+  Writer and technologist exploring the intersection of blockchain, cryptocurrencies, 
+  product development, data analytics, and digital marketing.
+baseurl: ""
+url: ""
 twitter_username: mandelliant
-github_username:  mandelliant
+github_username: mandelliant
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Override theme defaults
-minima:
-  skin: dark
+# Custom settings
+theme_color: "#00ff00"
+accent_color: "#ffff00"
+text_color: "#00ff00"
+background_color: "#000000"
 
-# SASS configuration
-sass:
-  sass_dir: assets/css
-  style: compressed
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Writing
+    url: /writing
+  - title: Technology
+    url: /technology
+  - title: About
+    url: /about
 
-#Google analytics
+# Social links
+social:
+  - platform: twitter
+    username: mandelliant
+  - platform: github
+    username: mandelliant
+
+# Google analytics
 google_analytics: UA-93189501-2
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

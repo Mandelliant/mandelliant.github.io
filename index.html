@@ -2,75 +2,72 @@
 layout: default
 ---
 
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="color: black;">Anthony Mandelli</h1>
-    <p>Blockchain & technology storytelling.</p>
-  </div>
-</div>
-
-<div class="wrapper">
-  <div class="home">
-    {% if site.posts.size > 0 %}
-    <div class="floating-content">
-      <h3 class="post-list-heading">{{ page.list_title | default: "Featured post:" }}</h3>
-      <ul class="post-list">
-        {% for post in site.posts limit:1 %}
-        <li class="post">
-          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h3>
-          {% if site.show_excerpts %}
-            {{ post.excerpt }}
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    <h2>Writing samples</h2>
-    <h4>
-      <a href="#Census">Census</a> |
-      <a href="#sp">Snowplow Analytics</a> |
-      <a href="#Blockchannel">Blockchannel</a> |
-      <a href="#tq">TQ Tezos</a>
-    </h4>
-
-    <div class="container">
-      <div id="section-box" class="post">
-        <h3><a name="Census">Census</a></h3>
-        <ul>
-          <li><a href="https://blog.getcensus.com/introduction-to-data-driven-lead-scoring-for-sales-marketing-analysts/">Introduction to data-driven lead scoring for sales & marketing analysts</a></li>
-        </ul>
-      </div>
-
-      <div id="section-box" class="post">
-        <h3><a name="sp">Snowplow Analytics</a></h3>
-        <ul>
-          <li><a href="https://snowplowanalytics.com/blog/2021/03/11/privacy-updates-ad-blockers-and-the-need-for-1st-party-tracking/">Privacy updates, ad blockers, and the need for 1st-party tracking</a></li>
-          <li><a href="https://snowplowanalytics.com/blog/2019/02/05/how-data-ownership-makes-you-a-more-effective-data-scientist/">How data ownership makes you a more effective data scientist</a></li>
-          <li><a href="https://snowplowanalytics.com/blog/2018/01/19/product-analytics-part-one-data-and-digital-products/">Product analytics series part one of eight</a></li>
-        </ul>
-      </div>
-
-      <div id="section-box" class="post">
-        <h3><a name="Blockchannel">Blockchannel</a></h3>
-        <ul>
-          <li><a href="https://medium.com/blockchannel/stop-renting-buy-top-level-domains-with-bob-wallet-16a25acfbd76">Stop renting: buy top-level domains with Bob Wallet</a></li>
-          <li><a href="https://medium.com/blockchannel/sexy-second-level-domains-for-your-substack-with-handshake-8de2155a2f52">Sexy second-level domains for your Substack with Handshake</a></li>
-        </ul>
-      </div>
-
-      <div id="section-box" class="post">
-        <h3><a name="tq">TQ Tezos</a></h3>
-        <ul>
-          <li><a href="https://medium.com/tqtezos/1-300-new-tezos-developers-trained-in-2019-31b0719186dd">1,300+ New Tezos Developers Trained in 2019</a></li>
-          <li><a href="https://medium.com/tqtezos/preparing-for-aztec-ignition-662610c1801b">Preparing for AZTEC Ignition</a></li>
-        </ul>
+<div class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ site.title | escape }}</h1>
+      <p class="hero-subtitle">{{ site.description | escape }}</p>
+      <div class="hero-cta">
+        <a href="{{ "/blog" | relative_url }}" class="btn">Read My Blog</a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="featured-posts">
+    <h2>Latest Articles</h2>
+    <div class="post-grid">
+      {%- assign posts = site.posts | slice: 0, 3 -%}
+      {%- for post in posts -%}
+        <article class="post-card">
+          <div class="post-card-content">
+            <h3 class="post-card-title">
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            <p class="post-card-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </p>
+            <div class="post-card-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+              </time>
+            </div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+    <div class="view-all">
+      <a href="{{ "/blog" | relative_url }}" class="btn">View All Posts</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        I'm a professional writer and technologist passionate about blockchain, cryptocurrencies, 
+        product development, data analytics, and digital marketing. Through my writing, I aim to 
+        bridge the gap between complex technical concepts and practical applications.
+      </p>
+      <div class="social-links">
+        {%- if site.github_username -%}
+          <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="social-link">
+            <svg class="svg-icon" viewBox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+          </a>
+        {%- endif -%}
+        {%- if site.twitter_username -%}
+          <a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}" class="social-link">
+            <svg class="svg-icon" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+            Twitter
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
 </div>
